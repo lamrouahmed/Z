@@ -361,25 +361,41 @@ const characterZ = [{
         }
     }
 ]
+const position = {
+    point: 0,
+    mid: 1,
+    anchor: 2
+}
+const action = {
+    next: '+',
+    prev: '-'
+}
 const generateSrc = (character, rendersDir, imgExt) => `./${rendersDir}/${character.renderName}.${imgExt}`;
-const changeSrc = (node, newSrc) => node.src = newSrc;
-const playAudio = (audioSrc) => (new Audio(audioSrc)).play();
+const changeData = (node, newSrc, newData) => {
+    node.src = newSrc
+    node.dataset.char = newData.name;
+}
+const playAudio = audioSrc => (new Audio(audioSrc)).play();
+const charIndex = (characterZ, characterName) => characterZ.map(character => character.name).indexOf(characterName);
+const returnIndex = (characterZ, dataset, action) => {
+    let index = eval(`${charIndex(characterZ, $(`img[data-position=${dataset.position}]`).dataset.char)} ${action[dataset.direction]} 1`);
+    if (index >= characterZ.length) return 0
+    else if (index < 0) return characterZ.length - 1
+    else return index
+
+}
 
 
-
-
-// setInterval(() => {
-//     changeSrc($('img'), generateSrc(characterZ[i], 'renderZ', 'png'))
-//     i++
-//     if(i > characterZ.length - 1) i = 0;
-//     console.log(i)
-// }, 500)
 
 
 
 $$('.Zarrow').forEach(arrow => {
     arrow.addEventListener('click', e => {
-        const {dataset} = e.currentTarget;
-        console.log(dataset);
+        const {
+            dataset
+        } = e.currentTarget;
+
+        let index = returnIndex(characterZ, dataset, action);
+        dataset.action === 'Zswitch' && changeData($(`img[data-position=${dataset.position}]`), generateSrc(characterZ[index], 'renderZ', 'png'), characterZ[index])
     })
 })

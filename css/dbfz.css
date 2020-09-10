@@ -33,6 +33,7 @@ body {
 .characterContainer {
   height: 100%;
   width: 33%;
+  max-width: 33%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,6 +49,7 @@ body {
   position: relative;
   height: 100%;
   width: 100%;
+  max-width: 100%;
 }
 
 .character .charImg {
