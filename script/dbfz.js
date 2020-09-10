@@ -366,27 +366,40 @@ const position = {
     mid: 1,
     anchor: 2
 }
+
 const action = {
     next: '+',
     prev: '-'
 }
+
 const generateSrc = (character, rendersDir, imgExt) => `./${rendersDir}/${character.renderName}.${imgExt}`;
+
 const changeData = (node, newSrc, newData) => {
     node.src = newSrc
     node.dataset.char = newData.name;
 }
+
 const playAudio = audioSrc => (new Audio(audioSrc)).play();
+
 const charIndex = (characterZ, characterName) => characterZ.map(character => character.name).indexOf(characterName);
+
 const returnIndex = (characterZ, dataset, action) => {
     let index = eval(`${charIndex(characterZ, $(`img[data-position=${dataset.position}]`).dataset.char)} ${action[dataset.direction]} 1`);
     if (index >= characterZ.length) return 0
     else if (index < 0) return characterZ.length - 1
     else return index
-
 }
 
-
-
+const swapData = (character, pos, act) => {
+    let newIndex = eval(`${position[pos]} ${action[act]} 1`);
+    const length = Object.keys(position).length;
+    if (newIndex >= length)  newIndex = 0
+    else if (newIndex < 0)  newIndex = length - 1
+    let newCharName = $$('img[data-position]')[newIndex];
+    [newCharName.dataset.char, character.dataset.char] = [character.dataset.char, newCharName.dataset.char];
+    changeData(character, generateSrc(characterZ[charIndex(characterZ, character.dataset.char)], 'renderZ', 'png'), characterZ[charIndex(characterZ, character.dataset.char)]);
+    changeData(newCharName, generateSrc(characterZ[charIndex(characterZ, newCharName.dataset.char)], 'renderZ', 'png'), characterZ[charIndex(characterZ, newCharName.dataset.char)])
+}
 
 
 $$('.Zarrow').forEach(arrow => {
@@ -396,6 +409,7 @@ $$('.Zarrow').forEach(arrow => {
         } = e.currentTarget;
 
         let index = returnIndex(characterZ, dataset, action);
-        dataset.action === 'Zswitch' && changeData($(`img[data-position=${dataset.position}]`), generateSrc(characterZ[index], 'renderZ', 'png'), characterZ[index])
+        dataset.action === 'Zchange' && changeData($(`img[data-position=${dataset.position}]`), generateSrc(characterZ[index], 'renderZ', 'png'), characterZ[index])
+        dataset.action === 'Zswitch' && swapData($(`img[data-position=${dataset.position}]`), dataset.position, dataset.direction);
     })
 })
