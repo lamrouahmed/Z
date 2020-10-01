@@ -407,7 +407,6 @@ $$('.Zarrow').forEach(arrow => {
         const {
             dataset
         } = e.currentTarget;
-
         let index = returnIndex(characterZ, dataset, action);
         dataset.action === 'Zchange' && changeData($(`img[data-position=${dataset.position}]`), generateSrc(characterZ[index], 'renderZ', 'png'), characterZ[index])
         dataset.action === 'Zswitch' && swapData($(`img[data-position=${dataset.position}]`), dataset.position, dataset.direction);

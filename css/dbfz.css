@@ -15,6 +15,7 @@ html {
 
 body {
   height: 100%;
+  background-color: #2e2a2a;
 }
 
 .teamContainer {
@@ -32,8 +33,8 @@ body {
 
 .characterContainer {
   height: 100%;
-  width: 33%;
-  max-width: 33%;
+  width: 100%;
+  max-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -52,8 +53,14 @@ body {
   max-width: 100%;
 }
 
+.character:last-child .charImg::after {
+  display: none !important;
+}
+
 .character .charImg {
   height: 100%;
+  width: 100%;
+  max-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -63,10 +70,25 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+}
+
+.character .charImg::after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 100%;
+  right: 0;
+  width: 5px;
+  background-color: white;
+  -webkit-transform: skewX(-10deg);
+          transform: skewX(-10deg);
+  z-index: 69;
 }
 
 .character .charImg img {
   height: 100%;
+  max-width: 100%;
 }
 
 .character .Zarrows {

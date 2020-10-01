@@ -14,6 +14,7 @@ html {
 
 body {
     height: 100%;
+    background-color: rgb(46, 42, 42);
 }
 
 
@@ -27,8 +28,8 @@ body {
 
 .characterContainer {
     height: 100%;
-    width: 33%;
-    max-width: 33%;
+    width: 100%;
+    max-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,16 +41,46 @@ body {
     width: 100%;
     max-width: 100%;
 
+    &:last-child {
+        .charImg {
+            &::after {
+                display: none !important;
+            }
+        }
+    }
+    
+
     .charImg {
         height: 100%;
+        width: 100%;
+        max-width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            height: 100%;
+            right: 0;
+            width: 5px;
+            background-color: rgb(255, 255, 255);
+            transform: skewX(-10deg);
+            z-index: 69;
+            
+        }
+          
 
         img {
             height: 100%;
+    max-width: 100%;
+            
         }
     }
+
+   
 
     .Zarrows {
         position: absolute;
