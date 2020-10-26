@@ -372,6 +372,12 @@ const action = {
     prev: '-'
 }
 
+const assist = {
+    a: '0',
+    b: '1',
+    c: '2'
+}
+
 const generateSrc = (character, rendersDir, imgExt) => `./${rendersDir}/${character.renderName}.${imgExt}`;
 
 const changeData = (node, newSrc, newData) => {
@@ -401,6 +407,16 @@ const swapData = (character, pos, act) => {
     changeData(newCharName, generateSrc(characterZ[charIndex(characterZ, newCharName.dataset.char)], 'renderZ', 'png'), characterZ[charIndex(characterZ, newCharName.dataset.char)])
 }
 
+const changeAssist = (character, pos, act) => {
+    
+   
+    const length = Object.keys(assist).length;
+    let newAssist = eval(`${assist[character.dataset.assist]} ${action[act]} 1`);
+    if (newAssist >= length)  newAssist = 0
+    else if (newAssist < 0)  newAssist = length - 1
+    console.log(newAssist);
+}
+
 
 $$('.Zarrow').forEach(arrow => {
     arrow.addEventListener('click', e => {
@@ -410,5 +426,15 @@ $$('.Zarrow').forEach(arrow => {
         let index = returnIndex(characterZ, dataset, action);
         dataset.action === 'Zchange' && changeData($(`img[data-position=${dataset.position}]`), generateSrc(characterZ[index], 'renderZ', 'png'), characterZ[index])
         dataset.action === 'Zswitch' && swapData($(`img[data-position=${dataset.position}]`), dataset.position, dataset.direction);
+        dataset.action === 'Zassist' && changeAssist($(`img[data-position=${dataset.position}]`), dataset.position, dataset.direction);
     })
 })
+
+
+const initializeData = () => {
+    const assists = $$('.ZassistName > p ');
+    const charZ = $$('img[data-position]');
+    assists.forEach((assistName, index) => {
+        
+    })
+}

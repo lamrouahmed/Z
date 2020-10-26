@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 *,
 *::before,
 *::after {
@@ -6,6 +7,7 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
 }
 
 html {
@@ -106,13 +108,21 @@ body {
         height: 33%;
         align-items: center;
 
-        &>div {
+        .Zarrow {
             height: 3rem;
             width: 3rem;
             cursor: pointer;
             &>svg {
                 height: 100%;
                 width: 100%;
+            }
+        }
+        .ZassistName {
+            & > p {
+                color: #FFF;
+                font-weight: 400;
+                text-shadow: 2px 2px 1px #000;
+                font-size: 2rem;
             }
         }
 
