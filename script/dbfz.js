@@ -432,9 +432,14 @@ $$('.Zarrow').forEach(arrow => {
 
 
 const initializeData = () => {
-    const assists = $$('.ZassistName > p ');
+    const assists = $$('.ZassistName > p');
     const charZ = $$('img[data-position]');
+    let assistType = '';
+    let charName = '';
     assists.forEach((assistName, index) => {
-        
+        assistType = charZ[index].dataset.assist;
+        charName = charZ[index].dataset.char;
+        assistName.textContent = characterZ[charIndex(characterZ, charName)].zAssist[assistType];
     })
 }
+ initializeData();
