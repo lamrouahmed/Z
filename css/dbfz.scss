@@ -17,14 +17,25 @@ html {
 body {
     height: 100%;
     background-color: #f6f6f6;
-    // background-color: rgb(46, 42, 42);
+    
+}
+.loaded {
+    background-color: rgb(46, 42, 42);
+    
+    .logo {
+        display: none !important;
+    }
+
+    .teamContainer {
+        display: flex !important;
+    }
 }
 
 
 
 .teamContainer {
     height: 100%;
-    display: flex;
+    // display: flex;
     justify-content: space-evenly;
     align-items: center;
 }

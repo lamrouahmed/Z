@@ -20,11 +20,22 @@ body {
   background-color: #f6f6f6;
 }
 
+.loaded {
+  background-color: #2e2a2a;
+}
+
+.loaded .logo {
+  display: none !important;
+}
+
+.loaded .teamContainer {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
 .teamContainer {
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;

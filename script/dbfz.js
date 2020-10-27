@@ -445,3 +445,7 @@ const initializeData = () => {
     })
 }
 initializeData();
+
+setInterval(() => {
+    $('body').classList.add('loaded');
+},3000)
