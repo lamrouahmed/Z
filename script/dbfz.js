@@ -373,9 +373,9 @@ const action = {
 }
 
 const assist = {
-    a: '0',
-    b: '1',
-    c: '2'
+    a: 0,
+    b: 1,
+    c: 2
 }
 
 const generateSrc = (character, rendersDir, imgExt) => `./${rendersDir}/${character.renderName}.${imgExt}`;
@@ -409,12 +409,14 @@ const swapData = (character, pos, act) => {
 
 const changeAssist = (character, pos, act) => {
     
-   
+    const assistField = $$('.ZassistName > p')[position[pos]];
     const length = Object.keys(assist).length;
     let newAssist = eval(`${assist[character.dataset.assist]} ${action[act]} 1`);
     if (newAssist >= length)  newAssist = 0
     else if (newAssist < 0)  newAssist = length - 1
-    console.log(newAssist);
+    const assistType = Object.keys(assist).filter(key =>  assist[key] === newAssist);
+    character.dataset.assist = assistType;
+    assistField.textContent = characterZ[charIndex(characterZ, character.dataset.char)].zAssist[assistType]
 }
 
 
@@ -442,4 +444,4 @@ const initializeData = () => {
         assistName.textContent = characterZ[charIndex(characterZ, charName)].zAssist[assistType];
     })
 }
- initializeData();
+initializeData();
