@@ -383,6 +383,8 @@ const generateSrc = (character, rendersDir, imgExt) => `./${rendersDir}/${charac
 const changeData = (node, newSrc, newData) => {
     node.src = newSrc
     node.dataset.char = newData.name;
+    initializeData();
+
 }
 
 const playAudio = audioSrc => (new Audio(audioSrc)).play();
@@ -403,8 +405,11 @@ const swapData = (character, pos, act) => {
     else if (newIndex < 0)  newIndex = length - 1
     let newCharName = $$('img[data-position]')[newIndex];
     [newCharName.dataset.char, character.dataset.char] = [character.dataset.char, newCharName.dataset.char];
+    [newCharName.dataset.assist, character.dataset.assist] = [character.dataset.assist, newCharName.dataset.assist]
     changeData(character, generateSrc(characterZ[charIndex(characterZ, character.dataset.char)], 'renderZ', 'png'), characterZ[charIndex(characterZ, character.dataset.char)]);
     changeData(newCharName, generateSrc(characterZ[charIndex(characterZ, newCharName.dataset.char)], 'renderZ', 'png'), characterZ[charIndex(characterZ, newCharName.dataset.char)])
+    initializeData();
+
 }
 
 const changeAssist = (character, pos, act) => {
@@ -448,4 +453,4 @@ initializeData();
 
 setInterval(() => {
     $('body').classList.add('loaded');
-},3000)
+},2000)
