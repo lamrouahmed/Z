@@ -359,6 +359,15 @@ const characterZ = [{
             b: 'Kamehameha',
             c: 'Unrestrained Will'
         }
+    },
+    {
+        name: 'Master Roshi',
+        renderName: 'roshi',
+        zAssist: {
+            a: 'Kamehameha',
+            b: 'Martial Spirit',
+            c: 'Turtle Hermit Flurry'
+        }
     }
 ]
 const position = {
@@ -451,6 +460,17 @@ const initializeData = () => {
 }
 initializeData();
 
-setInterval(() => {
-    $('body').classList.add('loaded');
-},2000)
+// setInterval(() => {
+//     $('body').classList.add('loaded');
+// },2000)
+
+
+
+
+
+
+
+fetch(window.location.href, {
+    method: 'get'
+}).then(response => response.text())
+  .then(data => data && $('body').classList.add('loaded'))
