@@ -477,8 +477,14 @@ const changeData = (node, newSrc, newData) => {
     node.src = newSrc
     node.dataset.char = newData.name;
     initializeData();
-
+    //node.classList.add('swaped');
+    // setTimeout(() => {
+    //     node.classList.remove('swaped');
+    // },300)
 }
+
+//$$('img[data-position]').forEach(img => img.addEventListener('animationend', e => e.currentTarget.classList.remove('swaped')))
+
 
 const playAudio = audioSrc => (new Audio(audioSrc)).play();
 
@@ -497,6 +503,7 @@ const swapData = (character, pos, act) => {
     if (newIndex >= length)  newIndex = 0
     else if (newIndex < 0)  newIndex = length - 1
     let newCharName = $$('img[data-position]')[newIndex];
+    
     [newCharName.dataset.char, character.dataset.char] = [character.dataset.char, newCharName.dataset.char];
     [newCharName.dataset.assist, character.dataset.assist] = [character.dataset.assist, newCharName.dataset.assist]
     changeData(character, generateSrc(characterZ[charIndex(characterZ, character.dataset.char)], 'renderZ', 'png'), characterZ[charIndex(characterZ, character.dataset.char)]);
@@ -534,6 +541,7 @@ $$('.Zarrow').forEach(arrow => {
 const initializeData = () => {
     const assists = $$('.ZassistName > p');
     const charZ = $$('img[data-position]');
+    const charContainer = $$('.charContainer');
     let assistType = '';
     let charName = '';
     assists.forEach((assistName, index) => {
@@ -541,6 +549,11 @@ const initializeData = () => {
         charName = charZ[index].dataset.char;
         assistName.textContent = characterZ[charIndex(characterZ, charName)].zAssist[assistType];
     })
+    charContainer.forEach((container, index) => {
+        let characterColor = characterZ[charIndex(characterZ, charZ[index].dataset.char)].color;
+        container.style.backgroundColor = characterColor
+    })
+    
 }
 initializeData();
 
