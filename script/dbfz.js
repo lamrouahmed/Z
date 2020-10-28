@@ -470,7 +470,10 @@ initializeData();
 
 
 
-fetch(window.location.href, {
-    method: 'get'
-}).then(response => response.text())
-  .then(data => data && $('body').classList.add('loaded'))
+// fetch(window.location.href, {
+//     method: 'get'
+// }).then(response => response.text())
+//   .then(data => data && $('body').classList.add('loaded'))
+
+
+  window.addEventListener('load', () => $('body').classList.add('loaded'));
