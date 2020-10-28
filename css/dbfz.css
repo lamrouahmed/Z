@@ -18,10 +18,11 @@ html {
 body {
   height: 100%;
   background-color: #f6f6f6;
+  overflow-x: hidden;
 }
 
 .loaded {
-  background-color: #2e2a2a;
+  background-color: #f6f6f6;
 }
 
 .loaded .logo {
@@ -84,19 +85,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-}
-
-.character .charImg::after {
-  content: '';
-  position: absolute;
-  display: block;
-  height: 100%;
-  right: 0;
-  width: 5px;
-  background-color: white;
-  -webkit-transform: skewX(-10deg);
-          transform: skewX(-10deg);
-  z-index: 69;
 }
 
 .character .charImg img {
@@ -212,5 +200,31 @@ body {
     -webkit-transform: rotate(360deg) scale(0.2);
             transform: rotate(360deg) scale(0.2);
   }
+}
+
+.character {
+  -webkit-transform: skewX(10deg);
+          transform: skewX(10deg);
+}
+
+.charContainer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  -webkit-transform: skewX(-10deg);
+          transform: skewX(-10deg);
+}
+
+.charContainer:nth-child(1) {
+  background-color: #f0a823;
+}
+
+.charContainer:nth-child(2) {
+  background-color: #2158ac;
+}
+
+.charContainer:nth-child(3) {
+  background-color: #3f1b81;
 }
 /*# sourceMappingURL=dbfz.css.map */

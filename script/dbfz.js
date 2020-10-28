@@ -7,7 +7,9 @@ const characterZ = [{
             a: 'Kamehameha',
             b: 'Flurry Kick',
             c: 'Dragon Storm '
-        }
+        },
+        color: '#F85B1A',
+        tier: 'S'
     },
     {
         name: 'Vegeta (Super Saiyan)',
@@ -16,7 +18,9 @@ const characterZ = [{
             a: 'Consecutive Energy Blast',
             b: 'Super Dash Kick',
             c: 'Crushing Knee Kick'
-        }
+        },
+        color: '#2158ac',
+        tier: 'S'
     },
     {
         name: 'Piccolo',
@@ -25,7 +29,9 @@ const characterZ = [{
             a: 'Homing Energy Blast',
             b: 'Demon Shocker',
             c: 'Demon Slicer'
-        }
+        },
+        color: '#5a7737',
+        tier: 'S'
     },
     {
         name: 'Gohan (Teen)',
@@ -34,7 +40,9 @@ const characterZ = [{
             a: 'Super Dragon Flight',
             b: 'Masendan',
             c: 'Flying Kick'
-        }
+        },
+        color: '#ecbb27',
+        tier: 'S'
     },
     {
         name: 'Frieza',
@@ -43,7 +51,9 @@ const characterZ = [{
             a: 'Death Slash',
             b: 'You might not survive this time',
             c: 'Psychokinesis'
-        }
+        },
+        color: '#8a7996',
+        tier: 'S'
     },
     {
         name: 'Captain Ginyu',
@@ -52,7 +62,9 @@ const characterZ = [{
             a: 'Strong Jersey',
             b: 'We are the Ginyu Force!',
             c: 'Strong Mixer'
-        }
+        },
+        color: '#34243a',
+        tier: 'S'
     },
     {
         name: 'Trunks',
@@ -61,7 +73,9 @@ const characterZ = [{
             a: 'Change the Future',
             b: 'Masenko',
             c: 'Flurry Slash'
-        }
+        },
+        color: '#3d3d6a',
+        tier: 'S'
     },
     {
         name: 'Cell',
@@ -70,7 +84,9 @@ const characterZ = [{
             a: 'Kamehameha',
             b: 'Shoulder Tackle',
             c: 'Perfect Attack'
-        }
+        },
+        color: '#7d9957',
+        tier: 'S'
     },
     {
         name: 'Android 18',
@@ -79,7 +95,9 @@ const characterZ = [{
             a: 'Barrier',
             b: 'Destructo-Disc',
             c: 'Support Attack'
-        }
+        },
+        color: '#3e5eca',
+        tier: 'S'
     },
     {
         name: 'Gotenks',
@@ -88,7 +106,9 @@ const characterZ = [{
             a: 'Galactic Donuts',
             b: 'Miracle Super Punch',
             c: 'Vengeful Shout'
-        }
+        },
+        color: '#eccb80',
+        tier: 'S'
     },
     {
         name: 'Krillin',
@@ -97,7 +117,9 @@ const characterZ = [{
             a: 'Senzu Bean',
             b: 'Kamehameha',
             c: 'Solar Flare'
-        }
+        },
+        color: '#cc731b',
+        tier: 'A'
     },
     {
         name: 'Kid Buu',
@@ -106,7 +128,9 @@ const characterZ = [{
             a: 'Arm Ball',
             b: 'Mystic Ball Attack',
             c: 'Kamehameha'
-        }
+        },
+        color: '#ffcbc6',
+        tier: 'S'
     },
     {
         name: 'Majin Buu',
@@ -115,7 +139,9 @@ const characterZ = [{
             a: 'Sweeping Breath',
             b: 'Fat Throw',
             c: 'Cartwheel'
-        }
+        },
+        color: '#ffc1c0',
+        tier: 'A'
     },
     {
         name: 'Nappa',
@@ -124,7 +150,9 @@ const characterZ = [{
             a: 'Blazing Storm',
             b: 'Too bad',
             c: 'Deluxe Bomber'
-        }
+        },
+        color: '#b0794c',
+        tier: 'B'
     },
     {
         name: 'Android 16',
@@ -133,7 +161,9 @@ const characterZ = [{
             a: 'Hell Heat',
             b: 'Hell Impact',
             c: 'Hyper Tackle'
-        }
+        },
+        color: '#5f712c',
+        tier: 'B'
     },
     {
         name: 'Yamcha',
@@ -142,7 +172,9 @@ const characterZ = [{
             a: 'Wolf Fang Fist',
             b: 'Kamehameha',
             c: 'Wolf Fang Fist: Pack Attack'
-        }
+        },
+        color: '#e29927',
+        tier: 'S'
     },
     {
         name: 'Tien',
@@ -151,7 +183,9 @@ const characterZ = [{
             a: 'Dodon Ray',
             b: 'Telekinesis',
             c: 'Volleyball Fist'
-        }
+        },
+        color: '#4a3033',
+        tier: 'S'
     },
     {
         name: 'Gohan (Adult)',
@@ -160,7 +194,9 @@ const characterZ = [{
             a: 'Jet Uppercut',
             b: 'Machine Gun Punch',
             c: 'Masenko'
-        }
+        },
+        color: '#94492e',
+        tier: 'A'
     },
     {
         name: 'Hit',
@@ -169,7 +205,9 @@ const characterZ = [{
             a: 'Guard Breaker',
             b: 'Instant Blow',
             c: 'Time Release'
-        }
+        },
+        color: '#7b647d',
+        tier: 'S'
     },
     {
         name: 'Goku (SSGSS)',
@@ -178,7 +216,9 @@ const characterZ = [{
             a: 'Dragon Flash Fist',
             b: 'Divine Void Strike',
             c: 'Instant Transmission'
-        }
+        },
+        color: '#dd874f',
+        tier: 'S'
     },
     {
         name: 'Vegeta (SSGSS)',
@@ -187,7 +227,9 @@ const characterZ = [{
             a: 'Big Bang Attack',
             b: 'Infinity Breaker',
             c: 'Super Dash Kick'
-        }
+        },
+        color: '#477cb7',
+        tier: 'S'
     },
     {
         name: 'Beerus',
@@ -196,7 +238,9 @@ const characterZ = [{
             a: 'Sphere of Destruction',
             b: 'God of Destruction\'s Rampage',
             c: 'God of Destruction\'s Wrath'
-        }
+        },
+        color: '#94799c',
+        tier: 'A'
     },
     {
         name: 'Goku Black',
@@ -205,7 +249,9 @@ const characterZ = [{
             a: 'Black Kamehameha',
             b: 'Godly Severance',
             c: 'Fierce God Kick'
-        }
+        },
+        color: '#7d6f6f',
+        tier: 'B'
     },
     {
         name: 'Android 21',
@@ -214,7 +260,9 @@ const characterZ = [{
             a: 'Total Detonation Ball',
             b: 'Hors d\'Oeuvre Stab',
             c: 'Snack Time'
-        }
+        },
+        color: '#c5afbd',
+        tier: 'S'
     },
     {
         name: 'Goku',
@@ -223,7 +271,9 @@ const characterZ = [{
             a: 'Energy Shockwave',
             b: 'Everyone, lend me your energy!',
             c: 'Kamehameha'
-        }
+        },
+        color: '#d67037',
+        tier: 'S'
     },
     {
         name: 'Vegeta',
@@ -232,7 +282,9 @@ const characterZ = [{
             a: 'Energy Cutter',
             b: 'Super Dash Kick',
             c: 'Dirty Fireworks'
-        }
+        },
+        color: '#17171eba',
+        tier: 'Z'
     },
     {
         name: 'Broly',
@@ -241,7 +293,9 @@ const characterZ = [{
             a: 'Eraser Blow',
             b: 'Machine Gun Shot',
             c: 'Lariat Express'
-        }
+        },
+        color: '#e1c3a2',
+        tier: 'Z'
     },
     {
         name: 'Zamasu(Fused)',
@@ -250,7 +304,9 @@ const characterZ = [{
             a: 'Divine Order',
             b: 'Eternal Justice',
             c: 'Divine Authority'
-        }
+        },
+        color: '#3c3d3f',
+        tier: 'C'
     },
     {
         name: 'Bardock',
@@ -259,7 +315,9 @@ const characterZ = [{
             a: 'Rebellion Spear',
             b: 'Tyrant Lancer',
             c: 'Rebellion Combination'
-        }
+        },
+        color: '#375347',
+        tier: 'S'
     },
     {
         name: 'Vegito(SSGSS)',
@@ -268,7 +326,9 @@ const characterZ = [{
             a: 'Split Finger Shot',
             b: 'Spiral Heel Shot',
             c: 'Spirit Sword'
-        }
+        },
+        color: '#295194',
+        tier: 'S'
     },
     {
         name: 'Android 17',
@@ -277,7 +337,9 @@ const characterZ = [{
             a: 'Reverse Gear',
             b: 'Power Blitz Charge',
             c: 'Accel Driver'
-        }
+        },
+        color: '#6d877c',
+        tier: 'S'
     },
     {
         name: 'Cooler',
@@ -286,7 +348,9 @@ const characterZ = [{
             a: 'Death Breaker',
             b: 'Genocidal Uppercut',
             c: 'Death Crasher'
-        }
+        },
+        color: '#615077',
+        tier: 'S'
     },
     {
         name: 'Jiren',
@@ -295,7 +359,9 @@ const characterZ = [{
             a: 'Infinity Rush',
             b: 'Grand Charge',
             c: 'Flash Fist'
-        }
+        },
+        color: '#d2403f',
+        tier: 'A'
     },
     {
         name: 'Videl',
@@ -304,7 +370,9 @@ const characterZ = [{
             a: 'Videl Rush',
             b: 'Eagle Rush',
             c: 'Rising Eagle'
-        }
+        },
+        color: '#f2eae6',
+        tier: 'B'
     },
     {
         name: 'Goku(GT)',
@@ -313,7 +381,9 @@ const characterZ = [{
             a: 'Kamehameha',
             b: 'Dragon Flash Fist',
             c: 'Power Pole'
-        }
+        },
+        color: '#68616c',
+        tier: 'S'
     },
     {
         name: 'Janemba',
@@ -322,7 +392,9 @@ const characterZ = [{
             a: 'Phantom Assault',
             b: 'Demonic Blade',
             c: 'Hellblade Flurry'
-        }
+        },
+        color: '#997396',
+        tier: 'S'
     },
     {
         name: 'Gogeta(SSGSS)',
@@ -331,7 +403,9 @@ const characterZ = [{
             a: 'Super Dash Kick',
             b: 'Rising Vortex',
             c: 'Galick Gun'
-        }
+        },
+        color: '#24589c',
+        tier: 'S'
     },
     {
         name: 'Broly(DBS)',
@@ -340,7 +414,9 @@ const characterZ = [{
             a: 'Raging Quake',
             b: 'Eraser Blow',
             c: 'Blaster Cannon'
-        }
+        },
+        color: '#415134',
+        tier: 'S'
     },
     {
         name: 'Kefla',
@@ -349,7 +425,9 @@ const characterZ = [{
             a: 'Super Cannonball',
             b: 'Mighty Kick',
             c: 'Gigantic Breaker'
-        }
+        },
+        color:'#c2446ce6',
+        tier: 'S'
     },
     {
         name: 'Goku(Ultra Instinct)',
@@ -358,7 +436,9 @@ const characterZ = [{
             a: 'Rising Heat',
             b: 'Kamehameha',
             c: 'Unrestrained Will'
-        }
+        },
+        color: '#cfd4d9',
+        tier: 'S'
     },
     {
         name: 'Master Roshi',
@@ -367,7 +447,9 @@ const characterZ = [{
             a: 'Kamehameha',
             b: 'Martial Spirit',
             c: 'Turtle Hermit Flurry'
-        }
+        },
+        color: '#ad884d',
+        tier: 'S'
     }
 ]
 const position = {
@@ -386,6 +468,8 @@ const assist = {
     b: 1,
     c: 2
 }
+
+window.addEventListener('load', () => $('body').classList.add('loaded'));
 
 const generateSrc = (character, rendersDir, imgExt) => `./${rendersDir}/${character.renderName}.${imgExt}`;
 
@@ -476,4 +560,3 @@ initializeData();
 //   .then(data => data && $('body').classList.add('loaded'))
 
 
-  window.addEventListener('load', () => $('body').classList.add('loaded'));

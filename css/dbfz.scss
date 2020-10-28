@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 *,
 *::before,
 *::after {
@@ -17,11 +18,12 @@ html {
 body {
     height: 100%;
     background-color: #f6f6f6;
-    
+    overflow-x: hidden;
 }
+
 .loaded {
-    background-color: rgb(46, 42, 42);
-    
+    background-color: #f6f6f6;
+
     .logo {
         display: none !important;
     }
@@ -62,7 +64,7 @@ body {
             }
         }
     }
-    
+
 
     .charImg {
         height: 100%;
@@ -73,28 +75,28 @@ body {
         align-items: center;
         position: relative;
 
-        &::after {
-            content: '';
-            position: absolute;
-            display: block;
-            height: 100%;
-            right: 0;
-            width: 5px;
-            background-color: rgb(255, 255, 255);
-            transform: skewX(-10deg);
-            z-index: 69;
-            
-        }
-          
+        // &::after {
+        //     content: '';
+        //     position: absolute;
+        //     display: block;
+        //     height: 100%;
+        //     right: 0;
+        //     width: 5px;
+        //     background-color: rgb(255, 255, 255);
+        //     transform: skewX(-10deg);
+        //     z-index: 69;
+
+        // }
+
 
         img {
             height: 100%;
-    max-width: 100%;
-            
+            max-width: 100%;
+
         }
     }
 
-   
+
 
     .Zarrows {
         position: absolute;
@@ -124,13 +126,15 @@ body {
             height: 3rem;
             width: 3rem;
             cursor: pointer;
+
             &>svg {
                 height: 100%;
                 width: 100%;
             }
         }
+
         .ZassistName {
-            & > p {
+            &>p {
                 color: #FFF;
                 font-weight: 400;
                 text-shadow: 2px 2px 1px #000;
@@ -159,10 +163,10 @@ body {
     height: 100%;
     width: 100%;
 
-    & > img{
+    &>img {
         width: 20.25rem;
         height: 15.1875rem;
-        animation: rotateLogo 2000ms cubic-bezier(.86,0,.07,1) alternate infinite;
+        animation: rotateLogo 2000ms cubic-bezier(.86, 0, .07, 1) alternate infinite;
     }
 }
 
@@ -171,7 +175,34 @@ body {
     from {
         transform: rotate(0deg) scale(1);
     }
+
     to {
         transform: rotate(360deg) scale(.2);
-    } 
+    }
+}
+
+
+.character {
+    transform: skewX(10deg);
+
+
+}
+
+.charContainer {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    transform: skewX(-10deg);
+
+    &:nth-child(1) {
+        background-color: rgb(240, 168, 35);
+    }
+    &:nth-child(2) {
+        background-color: rgb(33, 88, 172);
+    }
+    &:nth-child(3) {
+        background-color: rgb(63, 27, 129);
+    }
+
 }
