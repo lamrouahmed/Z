@@ -477,7 +477,7 @@ const generateSrc = (character, rendersDir, imgExt) => `./${rendersDir}/${charac
 const changeData = (node, newSrc, newData) => {
     node.src = newSrc
     node.dataset.char = newData.name;
-    loaded(node) && initializeData();
+    node.addEventListener('load', () => initializeData());
     //node.classList.add('swaped');
     // setTimeout(() => {
     //     node.classList.remove('swaped');
