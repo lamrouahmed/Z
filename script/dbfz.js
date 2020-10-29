@@ -551,7 +551,7 @@ const initializeData = () => {
     })
     charContainer.forEach((container, index) => {
         let characterColor = characterZ[charIndex(characterZ, charZ[index].dataset.char)].color;
-        if(loaded(charZ[index])) container.style.backgroundColor = characterColor
+        container.style.backgroundColor = characterColor
     })
     
 }
