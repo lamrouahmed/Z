@@ -468,6 +468,7 @@ const assist = {
     b: 1,
     c: 2
 }
+const loaded = img => img.complete && typeof img.naturalWidth != 'undefined' && img.naturalWidth != 0;
 
 window.addEventListener('load', () => $('body').classList.add('loaded'));
 
@@ -508,7 +509,6 @@ const swapData = (character, pos, act) => {
     [newCharName.dataset.assist, character.dataset.assist] = [character.dataset.assist, newCharName.dataset.assist]
     changeData(character, generateSrc(characterZ[charIndex(characterZ, character.dataset.char)], 'renderZ', 'png'), characterZ[charIndex(characterZ, character.dataset.char)]);
     changeData(newCharName, generateSrc(characterZ[charIndex(characterZ, newCharName.dataset.char)], 'renderZ', 'png'), characterZ[charIndex(characterZ, newCharName.dataset.char)])
-    initializeData();
 
 }
 
@@ -551,7 +551,7 @@ const initializeData = () => {
     })
     charContainer.forEach((container, index) => {
         let characterColor = characterZ[charIndex(characterZ, charZ[index].dataset.char)].color;
-        container.style.backgroundColor = characterColor
+        if(loaded(charZ[index])) container.style.backgroundColor = characterColor
     })
     
 }
