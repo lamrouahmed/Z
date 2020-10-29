@@ -71,18 +71,6 @@ body {
   transition: all 300ms ease-in-out;
 }
 
-.charContainer:nth-child(1) {
-  background-color: #f0a823;
-}
-
-.charContainer:nth-child(2) {
-  background-color: #2158ac;
-}
-
-.charContainer:nth-child(3) {
-  background-color: #3f1b81;
-}
-
 .character {
   position: relative;
   height: 100%;
