@@ -35,8 +35,29 @@ body {
   display: flex !important;
 }
 
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.logo > img {
+  width: 20.25rem;
+  height: 15.1875rem;
+  -webkit-animation: rotateLogo 2000ms cubic-bezier(0.86, 0, 0.07, 1) alternate infinite;
+          animation: rotateLogo 2000ms cubic-bezier(0.86, 0, 0.07, 1) alternate infinite;
+}
+
 .teamContainer {
-  height: 90%;
+  height: 85%;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -194,7 +215,25 @@ body {
   display: none;
 }
 
-.logo {
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 15%;
+}
+
+.footer > div {
+  height: 100%;
+}
+
+.footer .colors {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -204,15 +243,24 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100%;
-  width: 100%;
 }
 
-.logo > img {
-  width: 20.25rem;
-  height: 15.1875rem;
-  -webkit-animation: rotateLogo 2000ms cubic-bezier(0.86, 0, 0.07, 1) alternate infinite;
-          animation: rotateLogo 2000ms cubic-bezier(0.86, 0, 0.07, 1) alternate infinite;
+.footer .colors > div {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 100%;
+  margin-right: 1rem;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  background-color: white;
+  cursor: pointer;
+}
+
+.footer .colors > div:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
 .swaped {
@@ -221,7 +269,8 @@ body {
 }
 
 .smol {
-  height: 80% !important;
+  height: 93% !important;
+  max-width: 120% !important;
 }
 
 @-webkit-keyframes rotateLogo {
