@@ -468,7 +468,7 @@ const assist = {
     b: 1,
     c: 2
 }
-const loaded = img => img.complete && typeof img.naturalWidth != 'undefined' && img.naturalWidth != 0;
+// const loaded = img => img.complete && typeof img.naturalWidth != 'undefined' && img.naturalWidth != 0;
 
 window.addEventListener('load', () => $('body').classList.add('loaded'));
 

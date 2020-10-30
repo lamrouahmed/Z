@@ -58,9 +58,33 @@ body {
     max-width: 100%;
     transform: skewX(-10deg);
     transition: all 300ms ease-in-out;
-    // &:nth-child(1) {
-    //     background-color: rgb(240, 168, 35);
+    
+    &:nth-child(1)::before,
+    &:nth-child(2)::before,
+    &:nth-child(3)::before {      
+            content: '';
+            position: absolute;
+            display: block;
+            left: -100%;
+            top: 0;
+            z-index: -3;
+            height: 100%;
+            width: 100%;
+            background-color: inherit;
+            transition: all 300ms ease-in-out;
+    }
+    &:nth-child(3)::before {
+        left: 100% !important;
+    } 
+    &:nth-child(2)::before {
+        left: 0 !important;
+    }
+    // &:nth-child(1),
+    // &:nth-child(2),
+    // &:nth-child(3) {
+    //     z-index: 10 ;
     // }
+
     // &:nth-child(2) {
     //     background-color: rgb(33, 88, 172);
     // }

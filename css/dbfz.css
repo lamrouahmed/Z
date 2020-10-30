@@ -71,6 +71,28 @@ body {
   transition: all 300ms ease-in-out;
 }
 
+.charContainer:nth-child(1)::before, .charContainer:nth-child(2)::before, .charContainer:nth-child(3)::before {
+  content: '';
+  position: absolute;
+  display: block;
+  left: -100%;
+  top: 0;
+  z-index: -3;
+  height: 100%;
+  width: 100%;
+  background-color: inherit;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.charContainer:nth-child(3)::before {
+  left: 100% !important;
+}
+
+.charContainer:nth-child(2)::before {
+  left: 0 !important;
+}
+
 .character {
   position: relative;
   height: 100%;
