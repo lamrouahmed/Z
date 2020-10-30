@@ -524,7 +524,7 @@ const changeAssist = (character, pos, act) => {
     assistField.textContent = characterZ[charIndex(characterZ, character.dataset.char)].zAssist[assistType]
 }
 
-
+//
 $$('.Zarrow').forEach(arrow => {
     arrow.addEventListener('click', e => {
         const {
