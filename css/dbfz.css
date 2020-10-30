@@ -90,7 +90,7 @@ body {
 }
 
 .charContainer:nth-child(2)::before {
-  left: 0 !important;
+  left: 1% !important;
 }
 
 .character {
