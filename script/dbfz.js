@@ -544,10 +544,13 @@ const initializeData = () => {
     const charContainer = $$('.charContainer');
     let assistType = '';
     let charName = '';
+    
     assists.forEach((assistName, index) => {
         assistType = charZ[index].dataset.assist;
         charName = charZ[index].dataset.char;
         assistName.textContent = characterZ[charIndex(characterZ, charName)].zAssist[assistType];
+        if(charName === 'Captain Ginyu' || charName === 'Majin Buu') charZ[index].classList.add('smol')
+        else charZ[index].classList.remove('smol')
     })
     charContainer.forEach((container, index) => {
         let characterColor = characterZ[charIndex(characterZ, charZ[index].dataset.char)].color;
