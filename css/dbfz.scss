@@ -276,8 +276,8 @@ body {
             }
 
             &>svg {
-                height: 2rem;
-                width: 2rem;
+                height: 1.5rem;
+                width: 1.5rem;
 
                 path {
                     fill: #FFF !important;
@@ -301,6 +301,7 @@ body {
         &:hover {
             transition: all 200ms ease-in-out;
             transform: scale(.90);
+            
         }
 
         svg {
@@ -370,3 +371,4 @@ body {
         opacity: 1;
     }
 }
+
