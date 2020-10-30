@@ -49,7 +49,7 @@ body {
 
 
 .teamContainer {
-    height: 85%;
+    height: 88%;
     // display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -71,27 +71,30 @@ body {
     max-width: 100%;
     transform: skewX(-10deg);
     transition: all 300ms ease-in-out;
-    
+
     &:nth-child(1)::before,
     &:nth-child(2)::before,
-    &:nth-child(3)::before {      
-            content: '';
-            position: absolute;
-            display: block;
-            left: -99%;
-            top: 0;
-            z-index: -3;
-            height: 100%;
-            width: 100%;
-            background-color: inherit;
-            transition: all 300ms ease-in-out;
+    &:nth-child(3)::before {
+        content: '';
+        position: absolute;
+        display: block;
+        left: -99%;
+        top: 0;
+        z-index: -3;
+        height: 100%;
+        width: 100%;
+        background-color: inherit;
+        transition: all 300ms ease-in-out;
     }
+
     &:nth-child(3)::before {
         left: 99% !important;
-    } 
+    }
+
     &:nth-child(2)::before {
         left: 1% !important;
     }
+
     // &:nth-child(1),
     // &:nth-child(2),
     // &:nth-child(3) {
@@ -105,12 +108,14 @@ body {
     //     background-color: rgb(63, 27, 129);
     // }
 }
+
 .character {
     position: relative;
     height: 100%;
     width: 100%;
     max-width: 100%;
     transform: skewX(10deg);
+
     &:last-child {
         .charImg {
             &::after {
@@ -146,7 +151,7 @@ body {
         img {
             height: 100%;
             max-width: 100%;
-        }   
+        }
     }
 
 
@@ -216,8 +221,10 @@ body {
     width: 100%;
     align-items: center;
     justify-content: space-evenly;
-    height: 15%;
-    & > div {
+    height: 12%;
+    background-color: #1f1f20;
+
+    &>div {
         height: 100%;
     }
 
@@ -225,16 +232,19 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        
-        & > div {
-            height: 5rem;
-            width: 5rem;
+
+        &>div {
+            height: 4rem;
+            width: 4rem;
             border-radius: 100%;
             margin-right: 1rem;
             transition: all 300ms ease-in-out;
             background-color: white;
             cursor: pointer;
-            
+
+            &:last-child {
+                margin-right: 0 !important;
+            }
 
             &:hover {
                 transform: scale(.90);
@@ -242,11 +252,96 @@ body {
             }
         }
     }
+
+    .teamInfo {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .teamImg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            background-color: rgb(24, 23, 23);
+            height: 4rem;
+            width: 4rem;
+            cursor: pointer;
+            transition: all 200ms ease-in-out;
+            box-shadow: 0px 0px 2px 2px #131313;
+
+            &:hover {
+                transition: all 200ms ease-in-out;
+                transform: scale(.90);
+            }
+
+            &>svg {
+                height: 2rem;
+                width: 2rem;
+
+                path {
+                    fill: #FFF !important;
+                }
+            }
+        }
+    }
+
+    .generate {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(24, 23, 23);
+        border-radius: 100%;
+        height: 4rem;
+        width: 4rem;
+        cursor: pointer;
+        transition: all 200ms ease-in-out;
+        box-shadow: 0px 0px 2px 2px #131313;
+
+        &:hover {
+            transition: all 200ms ease-in-out;
+            transform: scale(.90);
+        }
+
+        svg {
+            path {
+                fill: #FFF;
+            }
+        }
+    }
+
+    .orientation {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        &>div {
+            background-color: rgb(255, 255, 255);
+            border-radius: 100%;
+            height: 4rem;
+            width: 4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 1rem;
+
+            &:last-child {
+                margin-right: 0 !important;
+            }
+
+            &>svg {
+                width: 3rem;
+                height: 3rem;
+
+
+            }
+        }
+    }
 }
 
 
 .swaped {
-    animation: imgFade 300ms cubic-bezier(.86, 0, .07, 1) ;
+    animation: imgFade 300ms cubic-bezier(.86, 0, .07, 1);
 }
 
 
@@ -265,6 +360,7 @@ body {
         transform: rotate(360deg) scale(.2);
     }
 }
+
 @keyframes imgFade {
     from {
         opacity: 0;
@@ -274,5 +370,3 @@ body {
         opacity: 1;
     }
 }
-
-

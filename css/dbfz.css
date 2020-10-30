@@ -57,7 +57,7 @@ body {
 }
 
 .teamContainer {
-  height: 85%;
+  height: 88%;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -226,7 +226,8 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  height: 15%;
+  height: 12%;
+  background-color: #1f1f20;
 }
 
 .footer > div {
@@ -246,8 +247,8 @@ body {
 }
 
 .footer .colors > div {
-  height: 5rem;
-  width: 5rem;
+  height: 4rem;
+  width: 4rem;
   border-radius: 100%;
   margin-right: 1rem;
   -webkit-transition: all 300ms ease-in-out;
@@ -256,11 +257,134 @@ body {
   cursor: pointer;
 }
 
+.footer .colors > div:last-child {
+  margin-right: 0 !important;
+}
+
 .footer .colors > div:hover {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
+}
+
+.footer .teamInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.footer .teamInfo .teamImg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 100%;
+  background-color: #181717;
+  height: 4rem;
+  width: 4rem;
+  cursor: pointer;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-box-shadow: 0px 0px 2px 2px #131313;
+          box-shadow: 0px 0px 2px 2px #131313;
+}
+
+.footer .teamInfo .teamImg:hover {
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.footer .teamInfo .teamImg > svg {
+  height: 2rem;
+  width: 2rem;
+}
+
+.footer .teamInfo .teamImg > svg path {
+  fill: #FFF !important;
+}
+
+.footer .generate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #181717;
+  border-radius: 100%;
+  height: 4rem;
+  width: 4rem;
+  cursor: pointer;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-box-shadow: 0px 0px 2px 2px #131313;
+          box-shadow: 0px 0px 2px 2px #131313;
+}
+
+.footer .generate:hover {
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.footer .generate svg path {
+  fill: #FFF;
+}
+
+.footer .orientation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .orientation > div {
+  background-color: white;
+  border-radius: 100%;
+  height: 4rem;
+  width: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 1rem;
+}
+
+.footer .orientation > div:last-child {
+  margin-right: 0 !important;
+}
+
+.footer .orientation > div > svg {
+  width: 3rem;
+  height: 3rem;
 }
 
 .swaped {
