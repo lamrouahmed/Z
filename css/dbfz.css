@@ -75,7 +75,7 @@ body {
   content: '';
   position: absolute;
   display: block;
-  left: -100%;
+  left: -99%;
   top: 0;
   z-index: -3;
   height: 100%;
@@ -86,7 +86,7 @@ body {
 }
 
 .charContainer:nth-child(3)::before {
-  left: 100% !important;
+  left: 99% !important;
 }
 
 .charContainer:nth-child(2)::before {
