@@ -35,6 +35,12 @@ body {
   display: flex !important;
 }
 
+.loaded .footer {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
 .logo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -216,9 +222,7 @@ body {
 }
 
 .footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   width: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;

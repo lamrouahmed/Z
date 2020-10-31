@@ -31,6 +31,9 @@ body {
     .teamContainer {
         display: flex !important;
     }
+    .footer {
+        display: flex !important;
+    }
 }
 
 .logo {
@@ -217,7 +220,7 @@ body {
 
 
 .footer {
-    display: flex;
+    display: none;
     width: 100%;
     align-items: center;
     justify-content: space-evenly;
