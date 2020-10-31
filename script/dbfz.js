@@ -470,7 +470,10 @@ const assist = {
 }
 // const loaded = img => img.complete && typeof img.naturalWidth != 'undefined' && img.naturalWidth != 0;
 
-window.addEventListener('load', () => $('body').classList.add('loaded'));
+window.addEventListener('load', () => {
+    $('body').classList.add('loaded')
+    load();
+});
 
 const generateSrc = (character, rendersDir, imgExt) => `./${rendersDir}/${character.renderName}.${imgExt}`;
 
@@ -661,4 +664,3 @@ function load() {
     })
 }
 
-load();
