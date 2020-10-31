@@ -579,6 +579,14 @@ $('.generate').addEventListener('click', e => {
         changeData(img, generateSrc(characterZ[randoms[img.dataset.position]],'renderZ', 'png'),characterZ[randoms[img.dataset.position]]);
     })
 })
+
+$$('.orientation > div').forEach(skew => skew.addEventListener('click', e => {
+    $('.characterContainer').classList.remove('rightSkew','leftSkew', 'normalSkew')
+    $('.characterContainer').classList.add(e.currentTarget.classList[0])
+    $$('.orientation > div').forEach(div => div.classList.remove('selected'))
+    e.currentTarget.classList.add('selected');
+}))
+
 const initializeData = () => {
     const assists = $$('.ZassistName > p');
     const charZ = $$('img[data-position]');

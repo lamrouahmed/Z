@@ -79,6 +79,36 @@ body {
           align-items: center;
 }
 
+.teamContainer .leftSkew .charContainer {
+  -webkit-transform: skewX(10deg);
+          transform: skewX(10deg);
+}
+
+.teamContainer .leftSkew .character {
+  -webkit-transform: skewX(-10deg);
+          transform: skewX(-10deg);
+}
+
+.teamContainer .rightSkew .charContainer {
+  -webkit-transform: skewX(-10deg);
+          transform: skewX(-10deg);
+}
+
+.teamContainer .rightSkew .character {
+  -webkit-transform: skewX(10deg);
+          transform: skewX(10deg);
+}
+
+.teamContainer .normalSkew .charContainer {
+  -webkit-transform: skewX(0deg);
+          transform: skewX(0deg);
+}
+
+.teamContainer .normalSkew .character {
+  -webkit-transform: skewX(0deg);
+          transform: skewX(0deg);
+}
+
 .characterContainer {
   height: 100%;
   width: 100%;
@@ -99,10 +129,8 @@ body {
   height: 100%;
   width: 100%;
   max-width: 100%;
-  -webkit-transform: skewX(-10deg);
-          transform: skewX(-10deg);
-  -webkit-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
+  -webkit-transition: background-color 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out;
 }
 
 .charContainer:nth-child(1)::before, .charContainer:nth-child(2)::before, .charContainer:nth-child(3)::before {
@@ -132,8 +160,6 @@ body {
   height: 100%;
   width: 100%;
   max-width: 100%;
-  -webkit-transform: skewX(10deg);
-          transform: skewX(10deg);
 }
 
 .character:last-child .charImg::after {
