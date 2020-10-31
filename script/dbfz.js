@@ -564,6 +564,13 @@ $('.generate').addEventListener('click', e => {
         mid: random(characterZ.length, true),
         anchor: random(characterZ.length, true)
     }
+    let uniq= new Set([randoms.point,randoms.mid,randoms.anchor]);
+    while(uniq.size < 3) {
+        randoms.point = random(characterZ.length, true),
+        randoms.mid = random(characterZ.length, true),
+        randoms.anchor = random(characterZ.length, true)
+        uniq = new Set([randoms.point,randoms.mid,randoms.anchor]);
+    }
     $$('img[data-position]').forEach(img => {
         changeData(img, generateSrc(characterZ[randoms[img.dataset.position]],'renderZ', 'png'),characterZ[randoms[img.dataset.position]]);
     })
