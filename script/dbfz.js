@@ -327,7 +327,7 @@ const characterZ = [{
             b: 'Spiral Heel Shot',
             c: 'Spirit Sword'
         },
-        color: '#295194',
+        color: '#375a95',
         tier: 'S'
     },
     {
@@ -404,7 +404,7 @@ const characterZ = [{
             b: 'Rising Vortex',
             c: 'Galick Gun'
         },
-        color: '#24589c',
+        color: '#3c7cb5',
         tier: 'S'
     },
     {
@@ -426,7 +426,7 @@ const characterZ = [{
             b: 'Mighty Kick',
             c: 'Gigantic Breaker'
         },
-        color:'#c2446ce6',
+        color:'#c2446c',
         tier: 'S'
     },
     {
