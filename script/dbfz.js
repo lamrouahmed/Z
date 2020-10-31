@@ -544,14 +544,28 @@ $$('.colors > div').forEach(color => {
             className
         } = e.currentTarget;
         const charColor = characterZ[charIndex(characterZ, $(`img[data-position=${className}]`).dataset.char)].color
-        $(`.charContainer[data-position=${className}]`).style.backgroundColor=`${adjust(charColor,random())}`
+        const newColor = adjust(charColor,random(100));
+        $(`.charContainer[data-position=${className}]`).style.backgroundColor=`${newColor}`
+        e.currentTarget.style.backgroundColor=`${newColor}`
     })
 })
-$$('.colors > div').forEach(color => {
-    color.addEventListener('mouseover', e => {
-        const {
-            className
-        } = e.currentTarget;
+// $$('.colors > div').forEach(color => {
+//     color.addEventListener('mouseover', e => {
+//         const {
+//             className
+//         } = e.currentTarget;
+//     })
+// })
+
+$('.generate').addEventListener('click', e => {
+    
+    const randoms = {
+        point: random(characterZ.length, true),
+        mid: random(characterZ.length, true),
+        anchor: random(characterZ.length, true)
+    }
+    $$('img[data-position]').forEach(img => {
+        changeData(img, generateSrc(characterZ[randoms[img.dataset.position]],'renderZ', 'png'),characterZ[randoms[img.dataset.position]]);
     })
 })
 const initializeData = () => {
@@ -620,10 +634,12 @@ function adjust(color, amount) {
     return '#' + color.replace(/^#/, '').replace(/../g, color => ('0'+Math.min(255, Math.max(0, parseInt(color, 16) + amount)).toString(16)).substr(-2));
 }
 
-function random() {
+function random(n, p=undefined) {
     let plusOrMinus = Math.random() < 0.5 ? -1 : 1
-    return Math.floor(Math.random()*100) * plusOrMinus
+    return p ? Math.floor(Math.random()*n) : Math.floor(Math.random()*n) * plusOrMinus
 }
+
+
 
 
 
