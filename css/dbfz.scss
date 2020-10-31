@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+@font-face {
+    font-family: "DB";
+    src: url('../font/Saiyan-Sans.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+
 *,
 *::before,
 *::after {
@@ -8,7 +17,7 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'DB', sans-serif;
 }
 
 html {
@@ -31,6 +40,7 @@ body {
     .teamContainer {
         display: flex !important;
     }
+
     .footer {
         display: flex !important;
     }
@@ -199,7 +209,8 @@ body {
                 color: #FFF;
                 font-weight: 400;
                 text-shadow: 2px 2px 1px #000;
-                font-size: 1.8rem;
+                font-size: 1.6rem;
+                letter-spacing: 2px;
             }
         }
 
@@ -304,7 +315,7 @@ body {
         &:hover {
             transition: all 200ms ease-in-out;
             transform: scale(.90);
-            
+
         }
 
         svg {
@@ -331,11 +342,13 @@ body {
             box-shadow: 0px 0px 2px 2px #131313;
             transition: all 200ms ease-in-out;
             cursor: pointer;
+
             &:hover {
                 transition: all 200ms ease-in-out;
                 transform: scale(.90);
-                
+
             }
+
             &:last-child {
                 margin-right: 0 !important;
             }
@@ -393,4 +406,3 @@ body {
         opacity: 1;
     }
 }
-
