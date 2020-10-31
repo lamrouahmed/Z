@@ -423,6 +423,48 @@ body {
   fill: #000 !important;
 }
 
+.footer .teamStrength {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.footer .teamStrength .tier {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 100%;
+  background-color: #181717;
+  height: 4rem;
+  width: 4rem;
+  cursor: pointer;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-box-shadow: 0px 0px 2px 2px #131313;
+          box-shadow: 0px 0px 2px 2px #131313;
+  color: #FFF;
+  font-size: 2.5rem;
+}
+
+.footer .teamStrength .tier:hover {
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
 .swaped {
   -webkit-animation: imgFade 300ms cubic-bezier(0.86, 0, 0.07, 1);
           animation: imgFade 300ms cubic-bezier(0.86, 0, 0.07, 1);
