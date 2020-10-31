@@ -646,9 +646,9 @@ function random(n, p=undefined) {
 
 
 
-// function load() {
-//     let images = [];
-//     characterZ.forEach((char, i) => images.push(new Image().src = generateSrc(characterZ[i], 'renderZ', 'png')))
-// }
+function load() {
+    let images = [];
+    characterZ.forEach((char, i) => images.push(new Image().src = generateSrc(characterZ[i], 'renderZ', 'png')))
+}
 
-// load();
+load();
