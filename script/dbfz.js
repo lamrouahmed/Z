@@ -656,7 +656,9 @@ function random(n, p=undefined) {
 
 function load() {
     let images = [];
-    characterZ.forEach((char, i) => images.push(new Image().src = generateSrc(characterZ[i], 'renderZ', 'png')))
+    characterZ.forEach(char => {
+        if(char.renderName !== 'goku_ssj' &&  char.renderName !== 'vegeta_ssj' && char.renderName !== 'gohan_teen') images.push(new Image().src = generateSrc(char, 'renderZ', 'png'))
+    })
 }
 
 load();
