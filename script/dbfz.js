@@ -644,3 +644,12 @@ function random(n, p=undefined) {
 
 
 
+
+
+function load() {
+    let images = [];
+    characterZ.forEach((char, i) => images.push(new Image().src = generateSrc(characterZ[i], 'renderZ', 'png')))
+    console.log(images)
+}
+
+load();
