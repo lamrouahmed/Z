@@ -320,7 +320,7 @@ body {
         align-items: center;
 
         &>div {
-            background-color: rgb(255, 255, 255);
+            background-color: rgb(24, 23, 23);
             border-radius: 100%;
             height: 4rem;
             width: 4rem;
@@ -328,16 +328,33 @@ body {
             justify-content: center;
             align-items: center;
             margin-right: 1rem;
-
+            box-shadow: 0px 0px 2px 2px #131313;
+            transition: all 200ms ease-in-out;
+            cursor: pointer;
+            &:hover {
+                transition: all 200ms ease-in-out;
+                transform: scale(.90);
+                
+            }
             &:last-child {
                 margin-right: 0 !important;
             }
 
             &>svg {
-                width: 3rem;
-                height: 3rem;
+                width: 2rem;
+                height: 2rem;
 
+                path {
+                    fill: #FFF !important;
+                }
+            }
+        }
 
+        .selected {
+            background-color: #FFF;
+
+            svg path {
+                fill: #000 !important;
             }
         }
     }
