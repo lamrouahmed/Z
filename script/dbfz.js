@@ -472,7 +472,7 @@ const assist = {
 
 window.addEventListener('load', () => {
     $('body').classList.add('loaded')
-    load();
+    //load();
 });
 
 const generateSrc = (character, rendersDir, imgExt) => `./${rendersDir}/${character.renderName}.${imgExt}`;
