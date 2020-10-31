@@ -283,7 +283,7 @@ const characterZ = [{
             b: 'Super Dash Kick',
             c: 'Dirty Fireworks'
         },
-        color: '#17171eba',
+        color: '#2a2a2b',
         tier: 'Z'
     },
     {
