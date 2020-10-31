@@ -538,6 +538,22 @@ $$('.Zarrow').forEach(arrow => {
 })
 
 
+$$('.colors > div').forEach(color => {
+    color.addEventListener('click', e => {
+        const {
+            className
+        } = e.currentTarget;
+        const charColor = characterZ[charIndex(characterZ, $(`img[data-position=${className}]`).dataset.char)].color
+        $(`.charContainer[data-position=${className}]`).style.backgroundColor=`${adjust(charColor,random())}`
+    })
+})
+$$('.colors > div').forEach(color => {
+    color.addEventListener('mouseover', e => {
+        const {
+            className
+        } = e.currentTarget;
+    })
+})
 const initializeData = () => {
     const assists = $$('.ZassistName > p');
     const charZ = $$('img[data-position]');
@@ -603,3 +619,12 @@ initializeData();
 function adjust(color, amount) {
     return '#' + color.replace(/^#/, '').replace(/../g, color => ('0'+Math.min(255, Math.max(0, parseInt(color, 16) + amount)).toString(16)).substr(-2));
 }
+
+function random() {
+    let plusOrMinus = Math.random() < 0.5 ? -1 : 1
+    return Math.floor(Math.random()*100) * plusOrMinus
+}
+
+
+
+
