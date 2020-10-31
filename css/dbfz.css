@@ -108,8 +108,6 @@ body {
   height: 100%;
   width: 100%;
   background-color: inherit;
-  -webkit-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
 }
 
 .charContainer:nth-child(3)::before {
