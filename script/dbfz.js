@@ -496,7 +496,7 @@ const generateSrc = (character, rendersDir, imgExt) => `./${rendersDir}/${charac
 const changeData = (node, newSrc, newData) => {
     node.src = newSrc
     node.dataset.char = newData.name;
-    $('.headerLogo > img').classList.add('loading');
+    $('.headerLogo  img').classList.add('loading');
     node.addEventListener('load', () => initializeData());
     //node.classList.add('swaped');
     // setTimeout(() => {
@@ -663,7 +663,7 @@ const initializeData = () => {
         $$('.colors > div')[index].textContent = character.tier
     })
 
-    $('.headerLogo > img').classList.remove('loading');
+    $('.headerLogo  img').classList.remove('loading');
 
     
 }

@@ -53,10 +53,67 @@ header {
     align-items: center;
     background-color: #1f1f20;
     transition: all 200ms ease-in-out;
+    position: relative;
 
     img {
         height: 3rem;
         width: 3rem;
+    }
+
+    .socialMedia {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 2%;
+        
+        & > div {
+            height: 2.2rem;
+            width: 2.2rem;
+            margin-right: .6rem;
+            cursor: pointer;
+            transition: all 200ms ease-in-out;
+                
+                &:hover {
+                    transition: all 200ms ease-in-out;
+                    transform: scale(.9);
+                }
+            
+            &:nth-child(1) {
+                    &:hover {
+                        svg path{
+                            fill: #e53935;
+                        }
+                    }
+            }
+            &:nth-child(2) {
+                    &:hover {
+                        svg path{
+                            fill: #55acee;
+                        }
+                    }
+            }
+            &:nth-child(3) {
+                border-radius: 100%;
+                    &:hover {
+                        svg path{
+                            fill: #c2bdbd;
+                        }
+                    }
+            }
+            
+
+            &  svg {
+                height: 100%;
+                width: 100%;
+                
+
+                
+            }
+
+            
+            
+        }
     }
 
 
@@ -535,7 +592,6 @@ header {
             background-color: rgb(24, 23, 23);
             height: 4rem;
             width: 4rem;
-            cursor: pointer;
             transition: all 200ms ease-in-out;
             box-shadow: 0px 0px 2px 2px #131313;
             color: #FFF;
@@ -551,10 +607,6 @@ header {
                 white-space: nowrap;
             }
 
-            &:hover {
-                transition: all 200ms ease-in-out;
-                transform: scale(.90);
-            }
         }
     }
 }
