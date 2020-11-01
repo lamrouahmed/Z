@@ -529,7 +529,10 @@ const swapData = (character, pos, act) => {
     [newCharName.dataset.assist, character.dataset.assist] = [character.dataset.assist, newCharName.dataset.assist]
     changeData(character, generateSrc(characterZ[charIndex(characterZ, character.dataset.char)], 'renderZ', 'png'), characterZ[charIndex(characterZ, character.dataset.char)]);
     changeData(newCharName, generateSrc(characterZ[charIndex(characterZ, newCharName.dataset.char)], 'renderZ', 'png'), characterZ[charIndex(characterZ, newCharName.dataset.char)])
-
+    $$('.character').forEach(char => char.classList.remove('a', 'b', 'c'));
+    $$('img[data-position]').forEach((img, i) => {
+        $$('.character')[i].classList.add(img.dataset.assist)
+    })
 }
 
 const changeAssist = (character, pos, act) => {
