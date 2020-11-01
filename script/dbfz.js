@@ -589,6 +589,8 @@ $$('.colors > div').forEach(color => {
     })
 })
 
+$('.teamImg').addEventListener('click', () => $('body').classList.add('photoMode'))
+$('.teamTier').addEventListener('click', () => $('body').classList.remove('photoMode'))
 $('.generate').addEventListener('click', e => {
     
     const randoms = {
@@ -622,9 +624,9 @@ const initializeData = () => {
     let assistType = '';
     let charName = '';
     
-    //Array.from(charZ).reduce((a, b) => a + b, 0)
     let total = (Array.from(charZ).map(character => tierZ[characterZ[charIndex(characterZ, character.dataset.char)].tier]).reduce((a,b) => a + b, 0));
     $('.teamStrength .tier').textContent = tierCalc(total)
+    $('.teamTier p').textContent = tierCalc(total)
     assists.forEach((assistName, index) => {
         assistType = charZ[index].dataset.assist;
         charName = charZ[index].dataset.char;

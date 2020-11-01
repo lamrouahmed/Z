@@ -43,9 +43,28 @@ body {
 }
 
 .loaded .footer {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header {
+  height: 5.66rem;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #1f1f20;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+header img {
+  height: 3rem;
+  width: 3rem;
 }
 
 .logo {
@@ -77,6 +96,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: height 200ms ease-in-out;
+  transition: height 200ms ease-in-out;
 }
 
 .teamContainer .leftSkew .charContainer {
@@ -155,6 +176,11 @@ body {
   left: 1% !important;
 }
 
+.charContainer:hover .character .Zarrows {
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
 .character {
   position: relative;
   height: 100%;
@@ -205,6 +231,8 @@ body {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
 .character .Zchange,
@@ -259,7 +287,75 @@ body {
   display: none;
 }
 
+.teamTier {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  position: fixed;
+  height: 4rem;
+  width: 4rem;
+  bottom: 6%;
+  right: -5%;
+  z-index: 699;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}
+
+.teamTier p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 100%;
+  background-color: #181717;
+  height: 4rem;
+  width: 4rem;
+  cursor: pointer;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  color: #FFF;
+  font-size: 2.5rem;
+  position: relative;
+}
+
+.teamTier p::after {
+  content: url("../assets/cross.svg");
+  position: absolute;
+  height: 3rem;
+  width: 2rem;
+  display: none;
+  border-radius: 100%;
+}
+
+.teamTier p:hover {
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  background-color: #FFF;
+}
+
+.teamTier p:hover::after {
+  display: block;
+}
+
 .footer {
+  position: absolute;
+  bottom: -12%;
+  right: 0%;
+  -webkit-transition: position 200ms ease-in-out;
+  transition: position 200ms ease-in-out;
   display: none;
   width: 100%;
   -webkit-box-align: center;
@@ -516,6 +612,28 @@ body {
           transform: scale(0.9);
 }
 
+.photoMode {
+  overflow: hidden !important;
+}
+
+.photoMode .teamTier {
+  right: 3% !important;
+}
+
+.photoMode header {
+  height: 0 !important;
+}
+
+.photoMode .footer {
+  right: 100%;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.photoMode .teamContainer {
+  height: 100% !important;
+}
+
 .lowOp {
   opacity: .6;
 }
@@ -528,6 +646,32 @@ body {
 .smol {
   height: 93% !important;
   max-width: 120% !important;
+}
+
+.loaded {
+  background-color: #f6f6f6;
+}
+
+.loaded .logo {
+  display: none !important;
+}
+
+.loaded .teamContainer {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.loaded header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.loaded .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @-webkit-keyframes rotateLogo {

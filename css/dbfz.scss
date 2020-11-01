@@ -42,7 +42,21 @@ body {
     }
 
     .footer {
-        display: flex !important;
+        display: flex;
+    }
+}
+
+header {
+    height: 5.66rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #1f1f20;
+    transition: all 200ms ease-in-out;
+
+    img {
+        height: 3rem;
+        width: 3rem;
     }
 }
 
@@ -66,6 +80,7 @@ body {
     // display: flex;
     justify-content: space-evenly;
     align-items: center;
+    transition: height 200ms ease-in-out;
 
     .leftSkew {
 
@@ -144,18 +159,13 @@ body {
         left: 1% !important;
     }
 
-    // &:nth-child(1),
-    // &:nth-child(2),
-    // &:nth-child(3) {
-    //     z-index: 10 ;
-    // }
-
-    // &:nth-child(2) {
-    //     background-color: rgb(33, 88, 172);
-    // }
-    // &:nth-child(3) {
-    //     background-color: rgb(63, 27, 129);
-    // }
+    &:hover {
+        .character {
+            .Zarrows {
+                transition: all 200ms ease-in-out;
+            }
+        }
+    }
 }
 
 
@@ -218,6 +228,7 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        transition: all 200ms ease-in-out;
     }
 
     // .Zswitch,
@@ -269,9 +280,64 @@ body {
     display: none;
 }
 
+.teamTier {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+    height: 4rem;
+    width: 4rem;
+    bottom: 6%;
+    right: -5%;
+    z-index: 699;
+    transition: all 400ms ease-in-out;
+
+    p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        background-color: rgb(24, 23, 23);
+        height: 4rem;
+        width: 4rem;
+        cursor: pointer;
+        transition: all 200ms ease-in-out;
+        color: #FFF;
+        font-size: 2.5rem;
+        position: relative;
+
+        &::after {
+            content: url('../assets/cross.svg');
+            position: absolute;
+            height: 3rem;
+            width: 2rem;
+            display: none;
+            border-radius: 100%;
+        }
+
+        &:hover {
+            transition: all 200ms ease-in-out;
+            transform: scale(.90);
+            background-color: #FFF;
+
+            &::after {
+                display: block;
+            }
+        }
+
+
+    }
+
+
+}
+
 
 
 .footer {
+    position: absolute;
+    bottom: -12%;
+    right: 0%;
+    transition: position 200ms ease-in-out;
     display: none;
     width: 100%;
     align-items: center;
@@ -456,6 +522,28 @@ body {
     }
 }
 
+.photoMode {
+    overflow: hidden !important;
+
+    .teamTier {
+        right: 3% !important;
+    }
+
+    header {
+        height: 0 !important;
+    }
+
+    .footer {
+        right: 100%;
+        transform: scale(0);
+    }
+
+    .teamContainer {
+        height: 100% !important;
+    }
+
+}
+
 
 .lowOp {
     opacity: .6;
@@ -472,6 +560,27 @@ body {
 
     max-width: 120% !important;
 }
+
+.loaded {
+    background-color: #f6f6f6;
+
+    .logo {
+        display: none !important;
+    }
+
+    .teamContainer {
+        display: flex !important;
+    }
+
+    header {
+        display: flex;
+    }
+
+    .footer {
+        display: flex;
+    }
+}
+
 
 @keyframes rotateLogo {
     from {
