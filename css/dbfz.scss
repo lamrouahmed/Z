@@ -72,26 +72,29 @@ body {
         .charContainer {
             transform: skewX(10deg);
         }
-    
+
         .character {
             transform: skewX(-10deg);
         }
     }
+
     .rightSkew {
         .charContainer {
 
             transform: skewX(-10deg);
         }
-    
+
         .character {
             transform: skewX(10deg);
         }
     }
+
     .normalSkew {
         .charContainer {
             transform: skewX(0deg);
 
         }
+
         .character {
             transform: skewX(0deg);
         }
@@ -428,6 +431,17 @@ body {
             box-shadow: 0px 0px 2px 2px #131313;
             color: #FFF;
             font-size: 2.5rem;
+            position: relative;
+
+            &::after {
+                content: 'Tier-Team';
+                position: absolute;
+                left: 110%;
+                color: #FFF;
+                font-size: 2rem;
+                white-space: nowrap;
+            }
+
             &:hover {
                 transition: all 200ms ease-in-out;
                 transform: scale(.90);

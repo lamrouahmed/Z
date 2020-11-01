@@ -486,6 +486,16 @@ body {
           box-shadow: 0px 0px 2px 2px #131313;
   color: #FFF;
   font-size: 2.5rem;
+  position: relative;
+}
+
+.footer .teamStrength .tier::after {
+  content: 'Tier-Team';
+  position: absolute;
+  left: 110%;
+  color: #FFF;
+  font-size: 2rem;
+  white-space: nowrap;
 }
 
 .footer .teamStrength .tier:hover {
