@@ -571,6 +571,7 @@ header .socialMedia > div svg {
   transition: all 200ms ease-in-out;
   -webkit-box-shadow: 0px 0px 2px 2px #131313;
           box-shadow: 0px 0px 2px 2px #131313;
+  margin-left: 2rem;
 }
 
 .footer .generate:hover {
