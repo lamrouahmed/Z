@@ -129,8 +129,8 @@ body {
   height: 100%;
   width: 100%;
   max-width: 100%;
-  -webkit-transition: background-color 300ms ease-in-out;
-  transition: background-color 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in;
+  transition: all 300ms ease-in;
 }
 
 .charContainer:nth-child(1)::before, .charContainer:nth-child(2)::before, .charContainer:nth-child(3)::before {
@@ -160,6 +160,8 @@ body {
   height: 100%;
   width: 100%;
   max-width: 100%;
+  -webkit-transition: all 300ms ease-in;
+  transition: all 300ms ease-in;
 }
 
 .character:last-child .charImg::after {
@@ -185,6 +187,8 @@ body {
 .character .charImg img {
   height: 100%;
   max-width: 100%;
+  -webkit-transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
 }
 
 .character .Zarrows {
@@ -489,6 +493,10 @@ body {
   transition: all 200ms ease-in-out;
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
+}
+
+.lowOp {
+  opacity: .6;
 }
 
 .swaped {

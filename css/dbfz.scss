@@ -115,7 +115,8 @@ body {
     width: 100%;
     max-width: 100%;
     // transform: skewX(-10deg);
-    transition: background-color 300ms ease-in-out;
+    // transition: background-color 300ms ease-in-out, opacity 300ms ease-in-out;
+    transition: all 300ms ease-in;
 
     &:nth-child(1)::before,
     &:nth-child(2)::before,
@@ -154,12 +155,16 @@ body {
     // }
 }
 
+
+
 .character {
     position: relative;
     height: 100%;
     width: 100%;
     max-width: 100%;
     // transform: skewX(10deg);
+    transition: all 300ms ease-in;
+
 
     &:last-child {
         .charImg {
@@ -196,6 +201,7 @@ body {
         img {
             height: 100%;
             max-width: 100%;
+            transition: opacity 300ms ease-in-out;
         }
     }
 
@@ -431,6 +437,9 @@ body {
 }
 
 
+.lowOp {
+    opacity: .6;
+}
 
 
 .swaped {

@@ -9,7 +9,7 @@ const characterZ = [{
             c: 'Dragon Storm '
         },
         color: '#F85B1A',
-        tier: 'S'
+        tier: 'B'
     },
     {
         name: 'Vegeta (Super Saiyan)',
@@ -31,7 +31,7 @@ const characterZ = [{
             c: 'Demon Slicer'
         },
         color: '#5a7737',
-        tier: 'S'
+        tier: 'A'
     },
     {
         name: 'Gohan (Teen)',
@@ -42,7 +42,7 @@ const characterZ = [{
             c: 'Flying Kick'
         },
         color: '#ecbb27',
-        tier: 'S'
+        tier: 'Z'
     },
     {
         name: 'Frieza',
@@ -53,7 +53,7 @@ const characterZ = [{
             c: 'Psychokinesis'
         },
         color: '#8a7996',
-        tier: 'S'
+        tier: 'A'
     },
     {
         name: 'Captain Ginyu',
@@ -64,7 +64,7 @@ const characterZ = [{
             c: 'Strong Mixer'
         },
         color: '#34243a',
-        tier: 'S'
+        tier: 'Z'
     },
     {
         name: 'Trunks',
@@ -75,7 +75,7 @@ const characterZ = [{
             c: 'Flurry Slash'
         },
         color: '#3d3d6a',
-        tier: 'S'
+        tier: 'Z'
     },
     {
         name: 'Cell',
@@ -108,7 +108,7 @@ const characterZ = [{
             c: 'Vengeful Shout'
         },
         color: '#eccb80',
-        tier: 'S'
+        tier: 'Z'
     },
     {
         name: 'Krillin',
@@ -130,7 +130,7 @@ const characterZ = [{
             c: 'Kamehameha'
         },
         color: '#ffcbc6',
-        tier: 'S'
+        tier: 'Z'
     },
     {
         name: 'Majin Buu',
@@ -141,7 +141,7 @@ const characterZ = [{
             c: 'Cartwheel'
         },
         color: '#ffc1c0',
-        tier: 'A'
+        tier: 'S'
     },
     {
         name: 'Nappa',
@@ -163,7 +163,7 @@ const characterZ = [{
             c: 'Hyper Tackle'
         },
         color: '#5f712c',
-        tier: 'B'
+        tier: 'A'
     },
     {
         name: 'Yamcha',
@@ -185,7 +185,7 @@ const characterZ = [{
             c: 'Volleyball Fist'
         },
         color: '#4a3033',
-        tier: 'S'
+        tier: 'A'
     },
     {
         name: 'Gohan (Adult)',
@@ -306,7 +306,7 @@ const characterZ = [{
             c: 'Divine Authority'
         },
         color: '#3c3d3f',
-        tier: 'C'
+        tier: 'B'
     },
     {
         name: 'Bardock',
@@ -328,7 +328,7 @@ const characterZ = [{
             c: 'Spirit Sword'
         },
         color: '#375a95',
-        tier: 'S'
+        tier: 'A'
     },
     {
         name: 'Android 17',
@@ -339,7 +339,7 @@ const characterZ = [{
             c: 'Accel Driver'
         },
         color: '#6d877c',
-        tier: 'S'
+        tier: 'A'
     },
     {
         name: 'Cooler',
@@ -361,7 +361,7 @@ const characterZ = [{
             c: 'Flash Fist'
         },
         color: '#d2403f',
-        tier: 'A'
+        tier: 'S'
     },
     {
         name: 'Videl',
@@ -394,7 +394,7 @@ const characterZ = [{
             c: 'Hellblade Flurry'
         },
         color: '#997396',
-        tier: 'S'
+        tier: 'A'
     },
     {
         name: 'Gogeta(SSGSS)',
@@ -405,7 +405,7 @@ const characterZ = [{
             c: 'Galick Gun'
         },
         color: '#3c7cb5',
-        tier: 'S'
+        tier: 'A'
     },
     {
         name: 'Broly(DBS)',
@@ -416,7 +416,7 @@ const characterZ = [{
             c: 'Blaster Cannon'
         },
         color: '#415134',
-        tier: 'S'
+        tier: 'A'
     },
     {
         name: 'Kefla',
@@ -438,7 +438,7 @@ const characterZ = [{
             c: 'Unrestrained Will'
         },
         color: '#cfd4d9',
-        tier: 'S'
+        tier: 'Z'
     },
     {
         name: 'Master Roshi',
@@ -468,7 +468,23 @@ const assist = {
     b: 1,
     c: 2
 }
+
+const tierZ = {
+    Z: 30,
+    S: 25,
+    A: 20,
+    B: 15,
+    C: 10
+}
 // const loaded = img => img.complete && typeof img.naturalWidth != 'undefined' && img.naturalWidth != 0;
+
+const tierCalc = totalP => {
+    if(totalP === tierZ.Z * 3) return 'Z'
+    if(totalP >= tierZ.S * 3 && totalP < tierZ.Z * 3) return 'S'
+    if(totalP >= tierZ.A * 3 && totalP < tierZ.S * 3) return 'A'
+    if(totalP >= tierZ.B * 3 && totalP < tierZ.A * 3) return 'B'
+    return 'C'
+}
 
 window.addEventListener('load', () => {
     $('body').classList.add('loaded')
@@ -553,13 +569,25 @@ $$('.colors > div').forEach(color => {
         e.currentTarget.style.backgroundColor=`${newColor}`
     })
 })
-// $$('.colors > div').forEach(color => {
-//     color.addEventListener('mouseover', e => {
-//         const {
-//             className
-//         } = e.currentTarget;
-//     })
-// })
+$$('.colors > div').forEach(color => {
+    color.addEventListener('mouseover', e => {
+        const {
+            className
+        } = e.currentTarget;
+
+        $$('img[data-position]').forEach(img => {
+            img.dataset.position !== className && img.classList.add('lowOp')
+            img.dataset.position === className && img.classList.remove('lowOp')
+        })
+    })
+})
+$$('.colors > div').forEach(color => {
+    color.addEventListener('mouseout', e => {
+        $$('img[data-position]').forEach(img => {
+            img.classList.remove('lowOp')
+        })
+    })
+})
 
 $('.generate').addEventListener('click', e => {
     
@@ -594,6 +622,9 @@ const initializeData = () => {
     let assistType = '';
     let charName = '';
     
+    //Array.from(charZ).reduce((a, b) => a + b, 0)
+    let total = (Array.from(charZ).map(character => tierZ[characterZ[charIndex(characterZ, character.dataset.char)].tier]).reduce((a,b) => a + b, 0));
+    $('.teamStrength .tier').textContent = tierCalc(total)
     assists.forEach((assistName, index) => {
         assistType = charZ[index].dataset.assist;
         charName = charZ[index].dataset.char;
