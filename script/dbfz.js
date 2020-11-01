@@ -633,9 +633,10 @@ const initializeData = () => {
         else charZ[index].classList.remove('smol')
     })
     charContainer.forEach((container, index) => {
-        let characterColor = characterZ[charIndex(characterZ, charZ[index].dataset.char)].color;
-        container.style.backgroundColor = characterColor
-        $$('.colors > div')[index].style.backgroundColor = characterColor
+        let character = characterZ[charIndex(characterZ, charZ[index].dataset.char)];
+        container.style.backgroundColor = character.color
+        $$('.colors > div')[index].style.backgroundColor = character.color
+        $$('.colors > div')[index].textContent = character.tier
     })
     
 }

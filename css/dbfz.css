@@ -295,8 +295,19 @@ body {
   margin-right: 1rem;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
-  background-color: white;
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2rem;
+  text-shadow: 2px 2px 1px #000;
+  color: #FFF;
 }
 
 .footer .colors > div:last-child {
