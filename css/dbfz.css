@@ -714,9 +714,7 @@ header .socialMedia > div svg {
 }
 
 .photoMode .character::after {
-  -webkit-transform: scale(0.2);
-          transform: scale(0.2);
-  top: 30%;
+  opacity: 0;
 }
 
 .photoMode .Zarrows {
