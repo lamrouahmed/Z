@@ -543,9 +543,7 @@ const changeAssist = (character, pos, act) => {
     character.dataset.assist = assistType;
     assistField.textContent = characterZ[charIndex(characterZ, character.dataset.char)].zAssist[assistType]
     $$('.character')[position[pos]].classList.remove('a', 'b', 'c');
-
     $$('.character')[position[pos]].classList.add(assistType)
-
 }
 
 //
@@ -597,12 +595,19 @@ $$('.colors > div').forEach(color => {
 $('.teamImg').addEventListener('click', () => $('body').classList.add('photoMode'))
 $('.teamTier').addEventListener('click', () => $('body').classList.remove('photoMode'))
 $('.generate').addEventListener('click', e => {
-    
+
     const randoms = {
         point: random(characterZ.length, true),
         mid: random(characterZ.length, true),
         anchor: random(characterZ.length, true)
     }
+    const assists = {
+        point: random(3, true),
+        mid: random(3, true),
+        anchor: random(3, true)
+    }
+
+    const assistType = Object.keys(assist);
     let uniq= new Set([randoms.point,randoms.mid,randoms.anchor]);
     while(uniq.size < 3) {
         randoms.point = random(characterZ.length, true),
@@ -610,8 +615,14 @@ $('.generate').addEventListener('click', e => {
         randoms.anchor = random(characterZ.length, true)
         uniq = new Set([randoms.point,randoms.mid,randoms.anchor]);
     }
-    $$('img[data-position]').forEach(img => {
+    $$('img[data-position]').forEach((img,i) => {
         changeData(img, generateSrc(characterZ[randoms[img.dataset.position]],'renderZ', 'png'),characterZ[randoms[img.dataset.position]]);
+        $$('.character')[i].classList.remove('a', 'b', 'c');
+
+    })
+    $$('img[data-position]').forEach((img, i) => {
+        let pos = img.dataset.position;
+        img.dataset.assist= assistType[assists[pos]];
     })
 })
 
