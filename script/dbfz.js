@@ -620,6 +620,8 @@ $('.generate').addEventListener('click', e => {
     }
     $$('img[data-position]').forEach((img,i) => {
         changeData(img, generateSrc(characterZ[randoms[img.dataset.position]],'renderZ', 'png'),characterZ[randoms[img.dataset.position]]);
+        $('.headerLogo  img').classList.add('loading');
+        img.addEventListener('load', () => $('.headerLogo  img').classList.remove('loading'))
         $$('.character')[i].classList.remove('a', 'b', 'c');
 
     })
