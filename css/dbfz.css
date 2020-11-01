@@ -24,7 +24,7 @@ html {
 
 body {
   height: 100%;
-  background-color: #f6f6f6;
+  background-color: #1f1f20;
   overflow-x: hidden;
 }
 
@@ -65,6 +65,11 @@ header {
 header img {
   height: 3rem;
   width: 3rem;
+}
+
+.loading {
+  -webkit-animation: rotateLogo 2000ms cubic-bezier(0.86, 0, 0.07, 1) alternate infinite;
+          animation: rotateLogo 2000ms cubic-bezier(0.86, 0, 0.07, 1) alternate infinite;
 }
 
 .logo {
@@ -179,6 +184,8 @@ header img {
 .charContainer:hover .character .Zarrows {
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .character {
@@ -192,6 +199,18 @@ header img {
 
 .character:last-child .charImg::after {
   display: none !important;
+}
+
+.character::after {
+  content: url("");
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(0.12);
+          transform: scale(0.12);
+  top: 25%;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
 }
 
 .character .charImg {
@@ -220,7 +239,7 @@ header img {
 .character .Zarrows {
   position: absolute;
   height: 100%;
-  width: 100%;
+  width: 90%;
   top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -233,6 +252,9 @@ header img {
       justify-content: space-around;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
+  left: 10%;
+  -webkit-transform: scale(0);
+          transform: scale(0);
 }
 
 .character .Zchange,
@@ -254,8 +276,8 @@ header img {
 .character .Zchange .Zarrow,
 .character .Zswitch .Zarrow,
 .character .Zassist .Zarrow {
-  height: 3rem;
-  width: 3rem;
+  height: 2.4rem;
+  width: 2.4rem;
   cursor: pointer;
 }
 
@@ -281,6 +303,18 @@ header img {
 .character .Zassist .left svg {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+.a::after {
+  content: url("../assets/a.svg");
+}
+
+.b::after {
+  content: url("../assets/b.svg");
+}
+
+.c::after {
+  content: url("../assets/c.svg");
 }
 
 .teamContainer {
@@ -632,6 +666,16 @@ header img {
 
 .photoMode .teamContainer {
   height: 100% !important;
+}
+
+.photoMode .character::after {
+  -webkit-transform: scale(0.2);
+          transform: scale(0.2);
+  top: 30%;
+}
+
+.photoMode .Zarrows {
+  display: none;
 }
 
 .lowOp {

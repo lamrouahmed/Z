@@ -26,7 +26,7 @@ html {
 
 body {
     height: 100%;
-    background-color: #f6f6f6;
+    background-color: #1f1f20;
     overflow-x: hidden;
 }
 
@@ -58,6 +58,12 @@ header {
         height: 3rem;
         width: 3rem;
     }
+
+
+}
+
+.loading {
+    animation: rotateLogo 2000ms cubic-bezier(.86, 0, .07, 1) alternate infinite;
 }
 
 .logo {
@@ -163,9 +169,12 @@ header {
         .character {
             .Zarrows {
                 transition: all 200ms ease-in-out;
+                transform: scale(1);
             }
         }
     }
+
+
 }
 
 
@@ -185,6 +194,16 @@ header {
                 display: none !important;
             }
         }
+    }
+
+    &::after {
+        content: url("");
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transform: scale(.12);
+        top: 25%;
+        transition: all 400ms ease-in-out;
     }
 
 
@@ -223,12 +242,14 @@ header {
     .Zarrows {
         position: absolute;
         height: 100%;
-        width: 100%;
+        width: 90%;
         top: 0;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         transition: all 200ms ease-in-out;
+        left: 10%;
+        transform: scale(0);
     }
 
     // .Zswitch,
@@ -246,8 +267,8 @@ header {
         align-items: center;
 
         .Zarrow {
-            height: 3rem;
-            width: 3rem;
+            height: 2.4rem;
+            width: 2.4rem;
             cursor: pointer;
 
             &>svg {
@@ -271,6 +292,22 @@ header {
                 transform: rotate(180deg);
             }
         }
+    }
+}
+
+.a {
+    &::after {
+        content: url("../assets/a.svg");
+    }
+}
+.b {
+    &::after {
+        content: url("../assets/b.svg");
+    }
+}
+.c {
+    &::after {
+        content: url("../assets/c.svg");
     }
 }
 
@@ -540,6 +577,17 @@ header {
 
     .teamContainer {
         height: 100% !important;
+    }
+
+    .character {
+        &::after {
+            transform: scale(0.2);
+            top: 30%;
+        }
+    }
+
+    .Zarrows {
+        display: none;
     }
 
 }

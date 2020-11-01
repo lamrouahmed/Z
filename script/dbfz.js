@@ -382,7 +382,7 @@ const characterZ = [{
             b: 'Dragon Flash Fist',
             c: 'Power Pole'
         },
-        color: '#68616c',
+        color: '#6365aa',
         tier: 'S'
     },
     {
@@ -496,6 +496,7 @@ const generateSrc = (character, rendersDir, imgExt) => `./${rendersDir}/${charac
 const changeData = (node, newSrc, newData) => {
     node.src = newSrc
     node.dataset.char = newData.name;
+    $('.headerLogo > img').classList.add('loading');
     node.addEventListener('load', () => initializeData());
     //node.classList.add('swaped');
     // setTimeout(() => {
@@ -541,6 +542,10 @@ const changeAssist = (character, pos, act) => {
     const assistType = Object.keys(assist).filter(key =>  assist[key] === newAssist);
     character.dataset.assist = assistType;
     assistField.textContent = characterZ[charIndex(characterZ, character.dataset.char)].zAssist[assistType]
+    $$('.character')[position[pos]].classList.remove('a', 'b', 'c');
+
+    $$('.character')[position[pos]].classList.add(assistType)
+
 }
 
 //
@@ -627,12 +632,15 @@ const initializeData = () => {
     let total = (Array.from(charZ).map(character => tierZ[characterZ[charIndex(characterZ, character.dataset.char)].tier]).reduce((a,b) => a + b, 0));
     $('.teamStrength .tier').textContent = tierCalc(total)
     $('.teamTier p').textContent = tierCalc(total)
+    
+
     assists.forEach((assistName, index) => {
         assistType = charZ[index].dataset.assist;
         charName = charZ[index].dataset.char;
         assistName.textContent = characterZ[charIndex(characterZ, charName)].zAssist[assistType];
         if(charName === 'Captain Ginyu' || charName === 'Majin Buu') charZ[index].classList.add('smol')
         else charZ[index].classList.remove('smol')
+        $$('.character')[index].classList.add(assistType)
     })
     charContainer.forEach((container, index) => {
         let character = characterZ[charIndex(characterZ, charZ[index].dataset.char)];
@@ -640,6 +648,9 @@ const initializeData = () => {
         $$('.colors > div')[index].style.backgroundColor = character.color
         $$('.colors > div')[index].textContent = character.tier
     })
+
+    $('.headerLogo > img').classList.remove('loading');
+
     
 }
 initializeData();
