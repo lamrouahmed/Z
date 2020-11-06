@@ -507,6 +507,23 @@ const changeData = (node, newSrc, newData) => {
 //$$('img[data-position]').forEach(img => img.addEventListener('animationend', e => e.currentTarget.classList.remove('swaped')))
 
 
+const copy = url => {
+      // Create new element
+      const el = document.createElement('textarea');
+      // Set value (string to be copied)
+      el.value = url;
+      // Set non-editable to avoid focus and move outside of view
+      el.setAttribute('readonly', '');
+      el.style = {position: 'absolute', left: '-9999px', display: 'none'};
+      document.body.appendChild(el);
+      // Select text inside element
+      el.select();
+      // Copy text to clipboard
+      document.execCommand('copy');
+      // Remove temporary element
+      el.remove();
+}
+
 const playAudio = audioSrc => (new Audio(audioSrc)).play();
 
 const charIndex = (characterZ, characterName) => characterZ.map(character => character.name).indexOf(characterName);
@@ -631,11 +648,24 @@ $('.generate').addEventListener('click', e => {
     })
 })
 
+$('.link').addEventListener('click', () => {
+    let chars = [];
+    $$('img[data-position]').forEach((img, i) => {
+         chars[i] = `${img.dataset.position[0]}=${charIndex(characterZ, img.dataset.char)}-${img.dataset.assist}`
+    })
+    const link = `${window.location.href}?${chars.join('&')}`;
+    copy(link);
+})
+
 $$('.orientation > div').forEach(skew => skew.addEventListener('click', e => {
     $('.characterContainer').classList.remove('rightSkew','leftSkew', 'normalSkew')
     $('.characterContainer').classList.add(e.currentTarget.classList[0])
     $$('.orientation > div').forEach(div => div.classList.remove('selected'))
     e.currentTarget.classList.add('selected');
+}))
+$$('.platform > div').forEach(platform => platform.addEventListener('click', e => {
+    $$('.platform > div').forEach(div => div.classList.remove('selectedPlatform'))
+    e.currentTarget.classList.add('selectedPlatform');
 }))
 
 const initializeData = () => {
@@ -732,4 +762,6 @@ function load() {
         if(char.renderName !== 'goku_ssj' &&  char.renderName !== 'vegeta_ssj' && char.renderName !== 'gohan_teen') images.push(new Image().src = generateSrc(char, 'renderZ', 'png'))
     })
 }
+
+
 

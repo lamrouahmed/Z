@@ -66,53 +66,56 @@ header {
         align-items: center;
         position: absolute;
         right: 2%;
-        
-        & > div {
+
+        &>div {
             height: 2.2rem;
             width: 2.2rem;
             margin-right: .6rem;
             cursor: pointer;
             transition: all 200ms ease-in-out;
-                
-                &:hover {
-                    transition: all 200ms ease-in-out;
-                    transform: scale(.9);
-                }
-            
+
+            &:hover {
+                transition: all 200ms ease-in-out;
+                transform: scale(.9);
+            }
+
             &:nth-child(1) {
-                    &:hover {
-                        svg path{
-                            fill: #e53935;
-                        }
+                &:hover {
+                    svg path {
+                        fill: #e53935;
                     }
+                }
             }
+
             &:nth-child(2) {
-                    &:hover {
-                        svg path{
-                            fill: #55acee;
-                        }
+                &:hover {
+                    svg path {
+                        fill: #55acee;
                     }
+                }
             }
+
             &:nth-child(3) {
                 border-radius: 100%;
-                    &:hover {
-                        svg path{
-                            fill: #c2bdbd;
-                        }
-                    }
-            }
-            
 
-            &  svg {
+                &:hover {
+                    svg path {
+                        fill: #c2bdbd;
+                    }
+                }
+            }
+
+
+            & svg {
                 height: 100%;
                 width: 100%;
-                
 
-                
+
+
             }
 
-            
-            
+
+
         }
     }
 
@@ -357,11 +360,13 @@ header {
         content: url("../assets/a.svg");
     }
 }
+
 .b {
     &::after {
         content: url("../assets/b.svg");
     }
 }
+
 .c {
     &::after {
         content: url("../assets/c.svg");
@@ -428,19 +433,26 @@ header {
 
 
 .footer {
-    position: absolute;
-    bottom: -12%;
-    right: 0%;
+    // position: absolute;
+    // bottom: -12%;
+    // right: 0%;
     transition: position 200ms ease-in-out;
     display: none;
     width: 100%;
     align-items: center;
-    justify-content: space-evenly;
-    height: 12%;
+    flex-direction: column;
+    height: 20%;
     background-color: #1f1f20;
 
-    &>div {
+    .part1 {
         height: 100%;
+    }
+
+    .part1 {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
     }
 
     .colors {
@@ -478,7 +490,6 @@ header {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-
         .teamImg {
             display: flex;
             justify-content: center;
@@ -507,6 +518,34 @@ header {
         }
     }
 
+    .link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        background-color: rgb(24, 23, 23);
+        height: 4rem;
+        width: 4rem;
+        cursor: pointer;
+        transition: all 200ms ease-in-out;
+        box-shadow: 0px 0px 2px 2px #131313;
+        margin-left: 1.5rem;
+
+
+        &>svg {
+            height: 2rem;
+            width: 2rem;
+
+            path {
+                fill: #FFF !important;
+            }
+        }
+        &:hover {
+            transition: all 200ms ease-in-out;
+            transform: scale(.90);
+        }
+    }
+
     .generate {
         display: flex;
         justify-content: center;
@@ -518,6 +557,7 @@ header {
         cursor: pointer;
         transition: all 200ms ease-in-out;
         box-shadow: 0px 0px 2px 2px #131313;
+
         //margin-left: 2rem;
         &:hover {
             transition: all 200ms ease-in-out;
@@ -553,7 +593,6 @@ header {
             &:hover {
                 transition: all 200ms ease-in-out;
                 transform: scale(.90);
-
             }
 
             &:last-child {
@@ -584,6 +623,7 @@ header {
         align-items: center;
         justify-content: space-evenly;
         margin-right: 2rem;
+
         .tier {
             display: flex;
             justify-content: center;
@@ -607,6 +647,45 @@ header {
                 white-space: nowrap;
             }
 
+        }
+    }
+
+    .part2 {
+        .platform {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            &>div {
+                height: 4rem;
+                width: 4rem;
+                border-radius: 100%;
+                box-shadow: 0px 0px 2px 2px #131313;
+                transition: all 200ms ease-in-out;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 1rem;
+
+                &:hover {
+                    transition: all 200ms ease-in-out;
+                    transform: scale(.90);
+                }
+
+                svg {
+                    height: 2.5rem;
+                    width: 2.5rem;
+                }
+            }
+
+            .selectedPlatform {
+                background-color: #FFF;
+    
+                svg path {
+                    fill: #000 !important;
+                }
+            }
         }
     }
 }
@@ -633,6 +712,8 @@ header {
 
     .character {
         &::after {
+            // transform: scale(0.2);
+            // top: 30%;
             opacity: 0;
         }
     }

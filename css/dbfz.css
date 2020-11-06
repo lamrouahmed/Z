@@ -437,9 +437,6 @@ header .socialMedia > div svg {
 }
 
 .footer {
-  position: absolute;
-  bottom: -12%;
-  right: 0%;
   -webkit-transition: position 200ms ease-in-out;
   transition: position 200ms ease-in-out;
   display: none;
@@ -447,15 +444,29 @@ header .socialMedia > div svg {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  height: 12%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 20%;
   background-color: #1f1f20;
 }
 
-.footer > div {
+.footer .part1 {
   height: 100%;
+}
+
+.footer .part1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 100%;
 }
 
 .footer .colors {
@@ -550,6 +561,44 @@ header .socialMedia > div svg {
 
 .footer .teamInfo .teamImg > svg path {
   fill: #FFF !important;
+}
+
+.footer .link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 100%;
+  background-color: #181717;
+  height: 4rem;
+  width: 4rem;
+  cursor: pointer;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-box-shadow: 0px 0px 2px 2px #131313;
+          box-shadow: 0px 0px 2px 2px #131313;
+  margin-left: 1.5rem;
+}
+
+.footer .link > svg {
+  height: 2rem;
+  width: 2rem;
+}
+
+.footer .link > svg path {
+  fill: #FFF !important;
+}
+
+.footer .link:hover {
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 .footer .generate {
@@ -689,6 +738,59 @@ header .socialMedia > div svg {
   color: #FFF;
   font-size: 2rem;
   white-space: nowrap;
+}
+
+.footer .part2 .platform {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .part2 .platform > div {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 100%;
+  -webkit-box-shadow: 0px 0px 2px 2px #131313;
+          box-shadow: 0px 0px 2px 2px #131313;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 1rem;
+}
+
+.footer .part2 .platform > div:hover {
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.footer .part2 .platform > div svg {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.footer .part2 .platform .selectedPlatform {
+  background-color: #FFF;
+}
+
+.footer .part2 .platform .selectedPlatform svg path {
+  fill: #000 !important;
 }
 
 .photoMode {
