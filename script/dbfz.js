@@ -688,14 +688,15 @@ $('.generate').addEventListener('click', e => {
     })
 })
 
-// $('.link').addEventListener('click', () => {
-//     let chars = [];
-//     $$('img[data-position]').forEach((img, i) => {
-//          chars[i] = `${img.dataset.position[0]}=${charIndex(characterZ, img.dataset.char)}-${img.dataset.assist}`
-//     })
-//     const link = `${window.location.href}?${chars.join('&')}`;
-//     copy(link);
-// })
+$('.link').addEventListener('click', () => {
+    let chars = [];
+    $$('img[data-position]').forEach((img, i) => {
+         chars[i] = `${img.dataset.position[0]}=${charIndex(characterZ, img.dataset.char)}-${img.dataset.assist}`
+    })
+    const link = `${window.location.host}${window.location.pathname}?${chars.join('&')}`;
+    copy(link);
+    console.log(link)
+})
 
 $$('.orientation > div').forEach(skew => skew.addEventListener('click', e => {
     $('.characterContainer').classList.remove('rightSkew','leftSkew', 'normalSkew')
@@ -723,25 +724,19 @@ $('#gamerTag').addEventListener('input', updateGamerTag);
 
 
 const initializeData = () => {
+
+
     const assists = $$('.ZassistName > p');
     const charZ = $$('img[data-position]');
     const charContainer = $$('.charContainer');
     let assistType = '';
     let charName = '';
-    
+
     let total = (Array.from(charZ).map(character => tierZ[characterZ[charIndex(characterZ, character.dataset.char)].tier]).reduce((a,b) => a + b, 0));
     $('.teamStrength .tier').textContent = tierCalc(total)
     $('.teamTier p').textContent = tierCalc(total)
-    
 
-    assists.forEach((assistName, index) => {
-        assistType = charZ[index].dataset.assist;
-        charName = charZ[index].dataset.char;
-        assistName.textContent = characterZ[charIndex(characterZ, charName)].zAssist[assistType];
-        if(charName === 'Captain Ginyu' || charName === 'Majin Buu') charZ[index].classList.add('smol')
-        else charZ[index].classList.remove('smol')
-        $$('.character')[index].classList.add(assistType)
-    })
+
     charContainer.forEach((container, index) => {
         let character = characterZ[charIndex(characterZ, charZ[index].dataset.char)];
         container.style.backgroundColor = character.color
@@ -749,11 +744,56 @@ const initializeData = () => {
         $$('.colors > div')[index].textContent = character.tier
     })
 
-    $('.headerLogo  img').classList.remove('loading');
+
+    
+        assists.forEach((assistName, index) => {
+            assistType = charZ[index].dataset.assist;
+            charName = charZ[index].dataset.char;
+            assistName.textContent = characterZ[charIndex(characterZ, charName)].zAssist[assistType];
+            if(charName === 'Captain Ginyu' || charName === 'Majin Buu') charZ[index].classList.add('smol')
+            else charZ[index].classList.remove('smol')
+            $$('.character')[index].classList.add(assistType)
+        })
+    
+    
+
+      $('.headerLogo  img').classList.remove('loading');
+
+ 
 
     
 }
+
+const getUrl = () => {
+    const assists = $$('.ZassistName > p');
+    const charZ = $$('img[data-position]');
+    let assistType = '';
+    let charName = '';
+    const url = new URL(window.location.href);
+    
+    let team = [url.searchParams.get('p'), url.searchParams.get('m'), url.searchParams.get('a')]
+    if(team[0] && team[1] && team[2]) {
+        team[0] = team[0].split('-');
+        team[1] = team[1].split('-');
+        team[2] = team[2].split('-');
+    
+            assists.forEach((assistName, index) => {
+                assistType = team[index][1];
+                charName = characterZ[team[index][0]].name;
+                assistName.textContent = characterZ[team[index][0]].zAssist[assistType];
+                $$('img[data-position]')[index].dataset.assist = assistType
+                $$('img[data-position]')[index].dataset.char = charName
+                changeData($$('img[data-position]')[index], generateSrc(characterZ[team[index][0]], 'renderZ', 'png'), characterZ[team[index][0]]);
+                if(charName === 'Captain Ginyu' || charName === 'Majin Buu') charZ[index].classList.add('smol')
+                else charZ[index].classList.remove('smol')
+                $$('.character')[index].classList.remove('a', 'b', 'c');
+                $$('.character')[index].classList.add(assistType)
+            })
+    }
+  
+}
 initializeData();
+getUrl();
 $('.gamer > p').textContent = $('#gamerTag').value;
 // setInterval(() => {
 //     $('body').classList.add('loaded');
