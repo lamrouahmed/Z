@@ -204,6 +204,14 @@ header {
 
 
 }
+.hideAssists {
+    .charContainer .character {
+        &::after {
+            opacity: 0 !important;
+        }
+    }
+    
+}
 
 .charContainer {
     position: relative;
@@ -668,6 +676,7 @@ header {
         display: flex;
         align-items: center;
         height: 5rem;
+        justify-content: space-around;
         // width: 83%;
         width: 100%;
 
@@ -866,6 +875,8 @@ header {
     }
 }
 
+
+
 .photoMode {
     overflow: hidden !important;
 
@@ -886,15 +897,13 @@ header {
     .teamContainer {
         height: 100% !important;
     }
-    .gamer {
-        display: flex !important;
-    }
+    
 
     .character {
         &::after {
-            // transform: scale(0.2);
-            // top: 30%;
-            opacity: 0;
+            transform: scale(0.2);
+            top: 30%;
+            opacity: 1;
         }
     }
 
@@ -902,7 +911,18 @@ header {
         display: none;
     }
 
+    .gamer {
+        display: flex;
+    }
+    
+
 }
+
+.hideGamerTag {
+    display: none !important;
+}
+
+
 
 
 .lowOp {

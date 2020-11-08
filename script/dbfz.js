@@ -634,11 +634,23 @@ $('.teamImg').addEventListener('click', () => {
     } else if (elem.msRequestFullscreen) {
         elem.msRequestFullscreen();
     }
+    if($('.gamerTagCheckbox input').checked) {
+        $('.gamer').classList.add('hideGamerTag');
+    } else {
+        $('.gamer').classList.remove('hideGamerTag');
+    }
+    if($('.assistsCheckbox input').checked) {
+        $('.characterContainer').classList.add('hideAssists');
+    } else {
+        $('.characterContainer').classList.remove('hideAssists');
+    }
 })
 
 document.addEventListener('keydown', e => {
-    
-    if($('body').classList.contains('photoMode') && e.key === 'Escape') $('body').classList.remove('photoMode')
+    if($('body').classList.contains('photoMode') && e.key === 'Escape') {
+        $('body').classList.remove('photoMode')
+        $('.characterContainer').classList.remove('hideAssists');
+    }
 })
 // $('.teamTier').addEventListener('click', () => $('body').classList.remove('photoMode'))
 $('.generate').addEventListener('click', e => {
@@ -675,14 +687,14 @@ $('.generate').addEventListener('click', e => {
     })
 })
 
-$('.link').addEventListener('click', () => {
-    let chars = [];
-    $$('img[data-position]').forEach((img, i) => {
-         chars[i] = `${img.dataset.position[0]}=${charIndex(characterZ, img.dataset.char)}-${img.dataset.assist}`
-    })
-    const link = `${window.location.href}?${chars.join('&')}`;
-    copy(link);
-})
+// $('.link').addEventListener('click', () => {
+//     let chars = [];
+//     $$('img[data-position]').forEach((img, i) => {
+//          chars[i] = `${img.dataset.position[0]}=${charIndex(characterZ, img.dataset.char)}-${img.dataset.assist}`
+//     })
+//     const link = `${window.location.href}?${chars.join('&')}`;
+//     copy(link);
+// })
 
 $$('.orientation > div').forEach(skew => skew.addEventListener('click', e => {
     $('.characterContainer').classList.remove('rightSkew','leftSkew', 'normalSkew')

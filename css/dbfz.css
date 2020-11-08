@@ -203,6 +203,10 @@ header .socialMedia > div svg {
           align-items: center;
 }
 
+.hideAssists .charContainer .character::after {
+  opacity: 0 !important;
+}
+
 .charContainer {
   position: relative;
   height: 100%;
@@ -749,6 +753,8 @@ header .socialMedia > div svg {
       -ms-flex-align: center;
           align-items: center;
   height: 5rem;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   width: 100%;
 }
 
@@ -1012,18 +1018,25 @@ header .socialMedia > div svg {
   height: 100% !important;
 }
 
-.photoMode .gamer {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-}
-
 .photoMode .character::after {
-  opacity: 0;
+  -webkit-transform: scale(0.2);
+          transform: scale(0.2);
+  top: 30%;
+  opacity: 1;
 }
 
 .photoMode .Zarrows {
   display: none;
+}
+
+.photoMode .gamer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hideGamerTag {
+  display: none !important;
 }
 
 .lowOp {
