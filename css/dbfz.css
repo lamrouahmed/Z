@@ -976,11 +976,11 @@ header .socialMedia > div svg {
           justify-content: center;
   background-color: #1f1f20;
   position: absolute;
-  width: 21%;
   height: 7%;
   bottom: 2%;
   border-radius: 39px;
   left: 3%;
+  padding: 0 1rem;
 }
 
 .gamer .svg {
