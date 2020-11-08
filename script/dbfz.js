@@ -695,7 +695,6 @@ $('.link').addEventListener('click', () => {
     })
     const link = `${window.location.host}${window.location.pathname}?${chars.join('&')}`;
     copy(link);
-    console.log(link)
 })
 
 $$('.orientation > div').forEach(skew => skew.addEventListener('click', e => {
