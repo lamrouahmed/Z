@@ -627,13 +627,13 @@ $$('.colors > div').forEach(color => {
 $('.teamImg').addEventListener('click', () => {
     const elem = $('.teamContainer');
     $('body').classList.add('photoMode')
-    if (elem.requestFullscreen) {
-        elem.requestFullscreen();
-    } else if (elem.webkitRequestFullscreen) {
-        elem.webkitRequestFullscreen();
-    } else if (elem.msRequestFullscreen) {
-        elem.msRequestFullscreen();
-    }
+    // if (elem.requestFullscreen) {
+    //     elem.requestFullscreen();
+    // } else if (elem.webkitRequestFullscreen) {
+    //     elem.webkitRequestFullscreen();
+    // } else if (elem.msRequestFullscreen) {
+    //     elem.msRequestFullscreen();
+    // }
     if($('.gamerTagCheckbox input').checked) {
         $('.gamer').classList.add('hideGamerTag');
     } else {
