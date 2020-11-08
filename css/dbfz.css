@@ -589,6 +589,26 @@ header .socialMedia > div svg {
   -webkit-box-shadow: 0px 0px 2px 2px #131313;
           box-shadow: 0px 0px 2px 2px #131313;
   margin-left: 1.5rem;
+  position: relative;
+}
+
+.footer .link::after {
+  content: 'copied';
+  position: absolute;
+  font-family: 'Montserrat', sans-serif;
+  left: 5rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #FFF;
+  opacity: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
 .footer .link > svg {
@@ -605,6 +625,18 @@ header .socialMedia > div svg {
   transition: all 200ms ease-in-out;
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
+}
+
+.footer .copied::after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+  -webkit-user-select: initial;
+     -moz-user-select: initial;
+      -ms-user-select: initial;
+          user-select: initial;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
 .footer .generate {
@@ -1108,7 +1140,8 @@ header .socialMedia > div svg {
     height: 20rem;
     overflow: hidden;
   }
-  #characterContainer .charImg img, #characterContainer .charImg .smol {
+  #characterContainer .charImg img,
+  #characterContainer .charImg .smol {
     position: absolute;
     height: 55rem !important;
     max-width: unset !important;

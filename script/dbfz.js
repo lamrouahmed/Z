@@ -695,6 +695,11 @@ $('.link').addEventListener('click', () => {
     })
     const link = `${window.location.host}${window.location.pathname}?${chars.join('&')}&name=${$('.gamerTag input').value}`;
     copy(link);
+    $('.link').classList.remove('copied')
+    $('.link').classList.add('copied')
+    setTimeout(() => {
+        $('.link').classList.remove('copied')
+    }, 1000)
 })
 
 $$('.orientation > div').forEach(skew => skew.addEventListener('click', e => {
