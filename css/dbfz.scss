@@ -675,10 +675,9 @@ header {
     .part2 {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         height: 5rem;
-        justify-content: space-around;
-        // width: 83%;
-        width: 100%;
+        width: 83%;
 
         .gamerInfo {
             display: flex;
@@ -750,7 +749,7 @@ header {
             }
 
             input {
-                font-family: 'Montserrat', sans-serif;
+                font-family: 'DB', sans-serif;
                 color: #FFF;
                 border: none;
                 border-bottom: 2px solid #ffffff;
@@ -760,10 +759,10 @@ header {
                 width: 15rem;
                 display: block;
                 outline: none;
-                font-size: 1rem;
-
+                font-size: 1.6rem;
+                letter-spacing: 2px;
                 &::placeholder {
-                    font-size: 1rem;
+                    font-size: 1.4rem;
                     font-weight: 500;
                     color: #FFF;
                 }
@@ -871,8 +870,9 @@ header {
 
     p {
         color: #FFF;
-        font-size: 2.5rem;
+        font-size: 2.3rem;
         margin-left: 1rem;   
+        letter-spacing: 2px;
     }
 }
 

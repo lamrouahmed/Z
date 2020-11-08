@@ -752,10 +752,11 @@ header .socialMedia > div svg {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   height: 5rem;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  width: 100%;
+  width: 83%;
 }
 
 .footer .part2 .gamerInfo {
@@ -851,7 +852,7 @@ header .socialMedia > div svg {
 }
 
 .footer .part2 .gamerTag input {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'DB', sans-serif;
   color: #FFF;
   border: none;
   border-bottom: 2px solid #ffffff;
@@ -861,29 +862,30 @@ header .socialMedia > div svg {
   width: 15rem;
   display: block;
   outline: none;
-  font-size: 1rem;
+  font-size: 1.6rem;
+  letter-spacing: 2px;
 }
 
 .footer .part2 .gamerTag input::-webkit-input-placeholder {
-  font-size: 1rem;
+  font-size: 1.4rem;
   font-weight: 500;
   color: #FFF;
 }
 
 .footer .part2 .gamerTag input:-ms-input-placeholder {
-  font-size: 1rem;
+  font-size: 1.4rem;
   font-weight: 500;
   color: #FFF;
 }
 
 .footer .part2 .gamerTag input::-ms-input-placeholder {
-  font-size: 1rem;
+  font-size: 1.4rem;
   font-weight: 500;
   color: #FFF;
 }
 
 .footer .part2 .gamerTag input::placeholder {
-  font-size: 1rem;
+  font-size: 1.4rem;
   font-weight: 500;
   color: #FFF;
 }
@@ -995,8 +997,9 @@ header .socialMedia > div svg {
 
 .gamer p {
   color: #FFF;
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   margin-left: 1rem;
+  letter-spacing: 2px;
 }
 
 .photoMode {
