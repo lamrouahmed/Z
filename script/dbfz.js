@@ -688,14 +688,14 @@ $('.generate').addEventListener('click', e => {
     })
 })
 
-// $('.link').addEventListener('click', () => {
-//     let chars = [];
-//     $$('img[data-position]').forEach((img, i) => {
-//          chars[i] = `${img.dataset.position[0]}=${charIndex(characterZ, img.dataset.char)}-${img.dataset.assist}`
-//     })
-//     const link = `${window.location.href}?${chars.join('&')}`;
-//     copy(link);
-// })
+$('.link').addEventListener('click', () => {
+    let chars = [];
+    $$('img[data-position]').forEach((img, i) => {
+         chars[i] = `${img.dataset.position[0]}=${charIndex(characterZ, img.dataset.char)}-${img.dataset.assist}`
+    })
+    const link = `${window.location.href}?${chars.join('&')}`;
+    copy(link);
+})
 
 $$('.orientation > div').forEach(skew => skew.addEventListener('click', e => {
     $('.characterContainer').classList.remove('rightSkew','leftSkew', 'normalSkew')
