@@ -693,7 +693,7 @@ $('.link').addEventListener('click', () => {
     $$('img[data-position]').forEach((img, i) => {
          chars[i] = `${img.dataset.position[0]}=${charIndex(characterZ, img.dataset.char)}-${img.dataset.assist}`
     })
-    const link = `${window.location.host}${window.location.pathname}?${chars.join('&')}`;
+    const link = `${window.location.host}${window.location.pathname}?${chars.join('&')}&name=${$('.gamerTag input').value}`;
     copy(link);
 })
 
@@ -771,6 +771,7 @@ const getUrl = () => {
     const url = new URL(window.location.href);
     
     let team = [url.searchParams.get('p'), url.searchParams.get('m'), url.searchParams.get('a')]
+    let username = url.searchParams.get('name');
     if(team[0] && team[1] && team[2]) {
         team[0] = team[0].split('-');
         team[1] = team[1].split('-');
@@ -788,6 +789,8 @@ const getUrl = () => {
                 $$('.character')[index].classList.remove('a', 'b', 'c');
                 $$('.character')[index].classList.add(assistType)
             })
+            $('.gamerTag input').value = username
+            $('.gamer > p').textContent = username
     }
   
 }
