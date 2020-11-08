@@ -1,3 +1,4 @@
+//window.location.host + window.location.pathname
 const $ = e => document.querySelector(e);
 const $$ = e => document.querySelectorAll(e);
 const characterZ = [{
@@ -20,7 +21,7 @@ const characterZ = [{
             c: 'Crushing Knee Kick'
         },
         color: '#2158ac',
-        tier: 'S'
+        tier: 'A'
     },
     {
         name: 'Piccolo',
@@ -31,7 +32,7 @@ const characterZ = [{
             c: 'Demon Slicer'
         },
         color: '#5a7737',
-        tier: 'A'
+        tier: 'S'
     },
     {
         name: 'Gohan (Teen)',
@@ -53,7 +54,7 @@ const characterZ = [{
             c: 'Psychokinesis'
         },
         color: '#8a7996',
-        tier: 'A'
+        tier: 'B'
     },
     {
         name: 'Captain Ginyu',
@@ -64,7 +65,7 @@ const characterZ = [{
             c: 'Strong Mixer'
         },
         color: '#34243a',
-        tier: 'Z'
+        tier: 'A'
     },
     {
         name: 'Trunks',
@@ -75,7 +76,7 @@ const characterZ = [{
             c: 'Flurry Slash'
         },
         color: '#3d3d6a',
-        tier: 'Z'
+        tier: 'S'
     },
     {
         name: 'Cell',
@@ -119,7 +120,7 @@ const characterZ = [{
             c: 'Solar Flare'
         },
         color: '#cc731b',
-        tier: 'A'
+        tier: 'S'
     },
     {
         name: 'Kid Buu',
@@ -163,7 +164,7 @@ const characterZ = [{
             c: 'Hyper Tackle'
         },
         color: '#5f712c',
-        tier: 'A'
+        tier: 'B'
     },
     {
         name: 'Yamcha',
@@ -185,7 +186,7 @@ const characterZ = [{
             c: 'Volleyball Fist'
         },
         color: '#4a3033',
-        tier: 'A'
+        tier: 'S'
     },
     {
         name: 'Gohan (Adult)',
@@ -196,7 +197,7 @@ const characterZ = [{
             c: 'Masenko'
         },
         color: '#94492e',
-        tier: 'A'
+        tier: 'S'
     },
     {
         name: 'Hit',
@@ -207,7 +208,7 @@ const characterZ = [{
             c: 'Time Release'
         },
         color: '#7b647d',
-        tier: 'S'
+        tier: 'A'
     },
     {
         name: 'Goku (SSGSS)',
@@ -251,7 +252,7 @@ const characterZ = [{
             c: 'Fierce God Kick'
         },
         color: '#7d6f6f',
-        tier: 'B'
+        tier: 'C'
     },
     {
         name: 'Android 21',
@@ -273,7 +274,7 @@ const characterZ = [{
             c: 'Kamehameha'
         },
         color: '#d67037',
-        tier: 'S'
+        tier: 'Z'
     },
     {
         name: 'Vegeta',
@@ -306,7 +307,7 @@ const characterZ = [{
             c: 'Divine Authority'
         },
         color: '#3c3d3f',
-        tier: 'B'
+        tier: 'C'
     },
     {
         name: 'Bardock',
@@ -317,7 +318,7 @@ const characterZ = [{
             c: 'Rebellion Combination'
         },
         color: '#375347',
-        tier: 'S'
+        tier: 'Z'
     },
     {
         name: 'Vegito(SSGSS)',
@@ -339,7 +340,7 @@ const characterZ = [{
             c: 'Accel Driver'
         },
         color: '#6d877c',
-        tier: 'A'
+        tier: 'S'
     },
     {
         name: 'Cooler',
@@ -350,7 +351,7 @@ const characterZ = [{
             c: 'Death Crasher'
         },
         color: '#615077',
-        tier: 'S'
+        tier: 'A'
     },
     {
         name: 'Jiren',
@@ -361,7 +362,7 @@ const characterZ = [{
             c: 'Flash Fist'
         },
         color: '#d2403f',
-        tier: 'S'
+        tier: 'A'
     },
     {
         name: 'Videl',
@@ -394,7 +395,7 @@ const characterZ = [{
             c: 'Hellblade Flurry'
         },
         color: '#997396',
-        tier: 'A'
+        tier: 'S'
     },
     {
         name: 'Gogeta(SSGSS)',
@@ -405,7 +406,7 @@ const characterZ = [{
             c: 'Galick Gun'
         },
         color: '#3c7cb5',
-        tier: 'A'
+        tier: 'B'
     },
     {
         name: 'Broly(DBS)',
@@ -416,7 +417,7 @@ const characterZ = [{
             c: 'Blaster Cannon'
         },
         color: '#415134',
-        tier: 'A'
+        tier: 'S'
     },
     {
         name: 'Kefla',
@@ -507,22 +508,33 @@ const changeData = (node, newSrc, newData) => {
 //$$('img[data-position]').forEach(img => img.addEventListener('animationend', e => e.currentTarget.classList.remove('swaped')))
 
 
+$('.gamerTagCheckbox > label').addEventListener('click' , () => {
+    const checkbox = $('.gamerTagCheckbox > label input');
+    const svg = $('.gamerTagCheckbox label svg');
+    checkbox.checked && svg.classList.add('checked')
+    !(checkbox.checked) && svg.classList.remove('checked')
+})
+$('.assistsCheckbox > label').addEventListener('click' , () => {
+    const checkbox = $('.assistsCheckbox > label input');
+    const svg = $('.assistsCheckbox label svg');
+    checkbox.checked && svg.classList.add('checked')
+    !(checkbox.checked) && svg.classList.remove('checked')
+})
+
+
 const copy = url => {
-      // Create new element
       const el = document.createElement('textarea');
-      // Set value (string to be copied)
       el.value = url;
-      // Set non-editable to avoid focus and move outside of view
       el.setAttribute('readonly', '');
       el.style = {position: 'absolute', left: '-9999px', display: 'none'};
       document.body.appendChild(el);
-      // Select text inside element
       el.select();
-      // Copy text to clipboard
       document.execCommand('copy');
-      // Remove temporary element
       el.remove();
 }
+
+
+
 
 const playAudio = audioSrc => (new Audio(audioSrc)).play();
 
@@ -612,8 +624,23 @@ $$('.colors > div').forEach(color => {
     })
 })
 
-$('.teamImg').addEventListener('click', () => $('body').classList.add('photoMode'))
-$('.teamTier').addEventListener('click', () => $('body').classList.remove('photoMode'))
+$('.teamImg').addEventListener('click', () => {
+    const elem = $('.teamContainer');
+    $('body').classList.add('photoMode')
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+    } else if (elem.webkitRequestFullscreen) {
+        elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) {
+        elem.msRequestFullscreen();
+    }
+})
+
+document.addEventListener('keydown', e => {
+    
+    if($('body').classList.contains('photoMode') && e.key === 'Escape') $('body').classList.remove('photoMode')
+})
+// $('.teamTier').addEventListener('click', () => $('body').classList.remove('photoMode'))
 $('.generate').addEventListener('click', e => {
 
     const randoms = {
@@ -664,9 +691,23 @@ $$('.orientation > div').forEach(skew => skew.addEventListener('click', e => {
     e.currentTarget.classList.add('selected');
 }))
 $$('.platform > div').forEach(platform => platform.addEventListener('click', e => {
-    $$('.platform > div').forEach(div => div.classList.remove('selectedPlatform'))
-    e.currentTarget.classList.add('selectedPlatform');
+    if(e.currentTarget.classList.contains('selectedPlatform')) {
+        e.currentTarget.classList.remove('selectedPlatform')
+        $('.gamer .svg').innerHTML = '';
+    } else {
+        $$('.platform > div').forEach(div => div.classList.remove('selectedPlatform'))
+        e.currentTarget.classList.add('selectedPlatform')
+        $('.gamer .svg').innerHTML = $('.selectedPlatform').innerHTML;
+    }
 }))
+
+const updateGamerTag = e => {
+    $('.gamer > p').textContent = e.target.value;
+}
+
+$('#gamerTag').addEventListener('input', updateGamerTag);
+
+
 
 const initializeData = () => {
     const assists = $$('.ZassistName > p');
@@ -700,7 +741,7 @@ const initializeData = () => {
     
 }
 initializeData();
-
+$('.gamer > p').textContent = $('#gamerTag').value;
 // setInterval(() => {
 //     $('body').classList.add('loaded');
 // },2000)

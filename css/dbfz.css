@@ -6,6 +6,7 @@
   font-style: normal;
 }
 
+/*-------- Mobile Media Queries ---------*/
 *,
 *::before,
 *::after {
@@ -221,8 +222,8 @@ header .socialMedia > div svg {
   height: 100%;
   width: 100%;
   background-color: inherit;
-  -webkit-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
+  -webkit-transition: background-color 300ms ease-in;
+  transition: background-color 300ms ease-in;
 }
 
 .charContainer:nth-child(3)::before {
@@ -283,7 +284,6 @@ header .socialMedia > div svg {
 
 .character .charImg img {
   height: 100%;
-  max-width: 100%;
   -webkit-transition: opacity 300ms ease-in-out;
   transition: opacity 300ms ease-in-out;
 }
@@ -374,9 +374,7 @@ header .socialMedia > div svg {
 }
 
 .teamTier {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -448,12 +446,12 @@ header .socialMedia > div svg {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 20%;
   background-color: #1f1f20;
 }
 
 .footer .part1 {
-  height: 100%;
+  height: 5rem;
+  width: 100%;
 }
 
 .footer .part1 {
@@ -466,7 +464,6 @@ header .socialMedia > div svg {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  width: 100%;
 }
 
 .footer .colors {
@@ -501,6 +498,10 @@ header .socialMedia > div svg {
   font-size: 2rem;
   text-shadow: 2px 2px 1px #000;
   color: #FFF;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .footer .colors > div:last-child {
@@ -740,6 +741,29 @@ header .socialMedia > div svg {
   white-space: nowrap;
 }
 
+.footer .part2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 5rem;
+  width: 100%;
+}
+
+.footer .part2 .gamerInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .footer .part2 .platform {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -793,12 +817,184 @@ header .socialMedia > div svg {
   fill: #000 !important;
 }
 
-.photoMode {
-  overflow: hidden !important;
+.footer .part2 .gamerTag label {
+  height: 3rem;
+  width: 15rem;
+  position: relative;
 }
 
-.photoMode .teamTier {
-  right: 3% !important;
+.footer .part2 .gamerTag label::after {
+  content: '';
+  position: relative;
+  display: block;
+  top: -2px;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.footer .part2 .gamerTag label:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.footer .part2 .gamerTag input {
+  font-family: 'Montserrat', sans-serif;
+  color: #FFF;
+  border: none;
+  border-bottom: 2px solid #ffffff;
+  background-color: transparent;
+  font-weight: 500;
+  height: 2.5rem;
+  width: 15rem;
+  display: block;
+  outline: none;
+  font-size: 1rem;
+}
+
+.footer .part2 .gamerTag input::-webkit-input-placeholder {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #FFF;
+}
+
+.footer .part2 .gamerTag input:-ms-input-placeholder {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #FFF;
+}
+
+.footer .part2 .gamerTag input::-ms-input-placeholder {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #FFF;
+}
+
+.footer .part2 .gamerTag input::placeholder {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #FFF;
+}
+
+.footer .part2 .checkBoxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .part2 .checkBoxes > div label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 1rem;
+  color: #FFF;
+  font-size: 1.5rem;
+}
+
+.footer .part2 .checkBoxes input[type='checkbox'] {
+  display: none;
+}
+
+.footer .part2 .checkBoxes .checkboxSvg {
+  margin-right: 1rem;
+  height: 2rem;
+  width: 2rem;
+  cursor: pointer;
+  stroke: #c0c2c4;
+  stroke-width: 5;
+  fill: white;
+  stroke-width: 6px;
+}
+
+.footer .part2 .checkBoxes .checkboxSvg .box {
+  stroke-dasharray: 320;
+  stroke-dashoffset: 0;
+  fill: white;
+  -webkit-transition: stroke-dashoffset 150ms linear, fill 100ms ease-in-out;
+  transition: stroke-dashoffset 150ms linear, fill 100ms ease-in-out;
+  stroke-width: 6px;
+}
+
+.footer .part2 .checkBoxes .checkboxSvg .check {
+  stroke-dasharray: 82;
+  stroke-dashoffset: 83;
+  fill: none;
+  -webkit-transition: stroke-dashoffset 150ms linear, fill 100ms ease-in-out;
+  transition: stroke-dashoffset 150ms linear, fill 100ms ease-in-out;
+  stroke-width: 11px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.footer .part2 .checkBoxes .checked .check {
+  stroke-dashoffset: 0;
+  stroke: #FFF;
+}
+
+.footer .part2 .checkBoxes .checked .box {
+  fill: #181717;
+  stroke: #181717;
+  stroke-width: 10px;
+}
+
+.footer .part2 .checkBoxes .checked path {
+  fill: #181717;
+  stroke: #181717;
+}
+
+.gamer {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #1f1f20;
+  position: absolute;
+  width: 21%;
+  height: 7%;
+  bottom: 2%;
+  border-radius: 39px;
+  left: 3%;
+}
+
+.gamer .svg {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.gamer .svg svg {
+  height: 100%;
+  width: 100%;
+}
+
+.gamer p {
+  color: #FFF;
+  font-size: 2.5rem;
+  margin-left: 1rem;
+}
+
+.photoMode {
+  overflow: hidden !important;
 }
 
 .photoMode header {
@@ -809,10 +1005,17 @@ header .socialMedia > div svg {
   right: 100%;
   -webkit-transform: scale(0);
           transform: scale(0);
+  display: none !important;
 }
 
 .photoMode .teamContainer {
   height: 100% !important;
+}
+
+.photoMode .gamer {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
 }
 
 .photoMode .character::after {
@@ -861,6 +1064,45 @@ header .socialMedia > div svg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media (min-width: 0px) and (max-width: 736px) {
+  .teamContainer {
+    height: unset !important;
+  }
+  #characterContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #characterContainer .charContainer {
+    -webkit-transform: skewX(0deg);
+            transform: skewX(0deg);
+  }
+  #characterContainer .charContainer:last-child .charImg {
+    overflow: hidden;
+  }
+  #characterContainer .character {
+    -webkit-transform: skewX(0deg);
+            transform: skewX(0deg);
+  }
+  #characterContainer .charImg {
+    height: 20rem;
+    overflow: hidden;
+  }
+  #characterContainer .charImg img, #characterContainer .charImg .smol {
+    position: absolute;
+    height: 55rem !important;
+    max-width: unset !important;
+    top: 0rem;
+  }
+  .teamTier {
+    right: -20% !important;
+  }
+  .footer > div {
+    height: unset !important;
+  }
 }
 
 @-webkit-keyframes rotateLogo {

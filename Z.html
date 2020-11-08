@@ -57,7 +57,7 @@
         </div>
     </header>
     <div class="teamContainer">
-        <div class="characterContainer rightSkew">
+        <div class="characterContainer rightSkew" id="characterContainer">
             <div class="charContainer" data-position="point">
                 <div class="character">
                     <div class="charImg">
@@ -320,12 +320,19 @@
             </div>
 
         </div>
-
-
         <div class="teamTier">
             <p></p>
         </div>
 
+         
+    <div class="gamer">
+        <div class="svg">
+
+        </div>
+        <p>
+
+        </p>
+    </div>
 
     </div>
 
@@ -333,16 +340,18 @@
         <div class="part1">
             <div class="teamInfo">
                 <div class="teamImg">
-                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 298.73 298.73"
-                        style="enable-background:new 0 0 298.73 298.73;" xml:space="preserve">
-                        <path style="fill:#010002;" d="M264.959,9.35H33.787C15.153,9.35,0,24.498,0,43.154v212.461c0,18.634,15.153,33.766,33.787,33.766
-            h231.171c18.634,0,33.771-15.132,33.771-33.766V43.154C298.73,24.498,283.593,9.35,264.959,9.35z M193.174,59.623
-            c18.02,0,32.634,14.615,32.634,32.634s-14.615,32.634-32.634,32.634c-18.025,0-32.634-14.615-32.634-32.634
-            S175.149,59.623,193.174,59.623z M254.363,258.149H149.362H49.039c-9.013,0-13.027-6.521-8.964-14.566l56.006-110.93
-            c4.058-8.044,11.792-8.762,17.269-1.605l56.316,73.596c5.477,7.158,15.05,7.767,21.386,1.354l13.777-13.951
-            c6.331-6.413,15.659-5.619,20.826,1.762l35.675,50.959C266.487,252.16,263.376,258.149,254.363,258.149z" />
-                    </svg>
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 242.133 242.133" style="enable-background:new 0 0 242.133 242.133;" xml:space="preserve">
+	<path id="XMLID_26_" d="M89.247,131.673l-47.732,47.73l-15.909-15.91c-4.29-4.291-10.742-5.572-16.347-3.252
+		C3.654,162.563,0,168.033,0,174.1v53.032c0,8.284,6.716,15,15,15l53.033,0.001c0.007-0.001,0.012-0.001,0.019,0
+		c8.285,0,15-6.716,15-15c0-4.377-1.875-8.316-4.865-11.059l-15.458-15.458l47.73-47.729c5.858-5.858,5.858-15.355,0-21.213
+		C104.603,125.815,95.104,125.816,89.247,131.673z"/>
+	<path id="XMLID_28_" d="M227.133,0H174.1c-6.067,0-11.536,3.655-13.858,9.26c-2.321,5.605-1.038,12.057,3.252,16.347l15.911,15.911
+		l-47.729,47.73c-5.858,5.858-5.858,15.355,0,21.213c2.929,2.929,6.768,4.393,10.606,4.393c3.839,0,7.678-1.464,10.606-4.394
+		l47.73-47.73l15.909,15.91c2.869,2.87,6.706,4.394,10.609,4.394c1.933,0,3.882-0.373,5.737-1.142
+		c5.605-2.322,9.26-7.792,9.26-13.858V15C242.133,6.716,235.417,0,227.133,0z"/>
+</svg>
+
 
                 </div>
                 <div class="link">
@@ -431,7 +440,8 @@
         </div>
 
         <div class="part2">
-            <div class="platform">
+            <div class="gamerInfo">
+                <div class="platform">
                 <div class="playstation" data-platform="playstation">
                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 106.726 106.726"
@@ -492,9 +502,40 @@
 
                 </div>
             </div>
+            <div class="gamerTag">
+                <label>
+                    <input id="gamerTag" type="text" placeholder="your gamertag">
+                </label>
+            </div>
+            </div>
+            <div class="checkBoxes">
+                <div class="gamerTagCheckbox">
+                    <label>
+                        <svg viewBox="0 0 100 100" class="checkboxSvg">
+                            <path class=" box" d="M82,89H18c-3.87,0-7-3.13-7-7V18c0-3.87,3.13-7,7-7h64c3.87,0,7,3.13,7,7v64C89,85.87,85.87,89,82,89z">
+                                        </path>
+                                        <polyline class="check" points="25.5,53.5 39.5,67.5 72.5,34.5 "></polyline>
+                        </svg>
+                        hide gamer tag
+                        <input type="checkbox">
+                    </label>
+                </div>
+                <div class="assistsCheckbox">
+                    <label>
+                        <svg viewBox="0 0 100 100" class="checkboxSvg">
+                            <path class=" box" d="M82,89H18c-3.87,0-7-3.13-7-7V18c0-3.87,3.13-7,7-7h64c3.87,0,7,3.13,7,7v64C89,85.87,85.87,89,82,89z">
+                                        </path>
+                                        <polyline class="check" points="25.5,53.5 39.5,67.5 72.5,34.5 "></polyline>
+                        </svg>
+                        hide assists
+                        <input type="checkbox">
+                    </label>
+                </div>
+            </div>
         </div>
     </div>
 
+   
 
     <script src="./script/dbfz.js"></script>
 </body>
