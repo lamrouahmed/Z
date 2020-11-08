@@ -650,6 +650,7 @@ document.addEventListener('keydown', e => {
     if($('body').classList.contains('photoMode') && e.key === 'Escape') {
         $('body').classList.remove('photoMode')
         $('.characterContainer').classList.remove('hideAssists');
+        $('.gamer').classList.remove('hideGamerTag');
     }
 })
 // $('.teamTier').addEventListener('click', () => $('body').classList.remove('photoMode'))
