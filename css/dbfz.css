@@ -288,7 +288,6 @@ header .socialMedia > div svg {
 
 .character .charImg img {
   height: 100%;
-  max-width: 200%;
   -webkit-transition: opacity 300ms ease-in-out;
   transition: opacity 300ms ease-in-out;
 }
