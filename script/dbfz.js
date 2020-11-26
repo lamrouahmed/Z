@@ -599,7 +599,6 @@ $$('.colors > div').forEach(color => {
         } = e.currentTarget;
         const charColor = characterZ[charIndex(characterZ, $(`img[data-position=${className}]`).dataset.char)].color
         const newColor = adjust(charColor,random(80));
-        console.log(random(100), newColor)
         $(`.charContainer[data-position=${className}]`).style.backgroundColor=`${newColor}`
         e.currentTarget.style.backgroundColor=`${newColor}`
     })
