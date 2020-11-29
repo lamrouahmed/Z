@@ -904,10 +904,10 @@ header {
     // width: 21%;
     // bottom: 2%;
     // left: 3%;
-    width: 100%;
-    bottom: 2%;
+        // width: 100%;
+    bottom: 1%;
     display: none;
-
+    right: 3%;
     img {
         width: 17rem;
     }
@@ -971,7 +971,7 @@ header {
 
     .character {
         &::after {
-            transform: scale(0.2);
+            transform: scale(0.16);
             top: 30%;
             opacity: 1;
         }

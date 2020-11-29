@@ -1039,9 +1039,9 @@ header .socialMedia > div svg {
       -ms-flex-pack: center;
           justify-content: center;
   position: absolute;
-  width: 100%;
-  bottom: 2%;
+  bottom: 1%;
   display: none;
+  right: 3%;
 }
 
 .rankBig img {
@@ -1102,8 +1102,8 @@ header .socialMedia > div svg {
 }
 
 .photoMode .character::after {
-  -webkit-transform: scale(0.2);
-          transform: scale(0.2);
+  -webkit-transform: scale(0.16);
+          transform: scale(0.16);
   top: 30%;
   opacity: 1;
 }
