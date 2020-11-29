@@ -453,6 +453,105 @@ const characterZ = [{
         tier: 'S'
     }
 ]
+
+const ranks = [
+    {
+        rank: 'Saibaman',
+        renderName: 'saibaman'
+    },
+    {
+        rank: 'Earthling',
+        renderName: 'earthling'
+    },
+    {
+        rank: 'Namekian',
+        renderName: 'namekian'
+    },
+    {
+        rank: 'Saiyan',
+        renderName: 'saiyan'
+    },
+    {
+        rank: 'Freiza Clan',
+        renderName: 'freiza_clan'
+    },
+    {
+        rank: 'Super Saiyan',
+        renderName: 'ssj'
+    },
+    {
+        rank: 'Android',
+        renderName: 'android'
+    },
+    {
+        rank: 'Super Saiyan 2',
+        renderName: 'ssj2'
+    },
+    {
+        rank: 'Supreme Kai',
+        renderName: 'supreme_kai'
+    },
+    {
+        rank: 'Demon',
+        renderName: 'demon'
+    },
+    {
+        rank: 'Super Saiyan 3',
+        renderName: 'ssj3'
+    },
+    {
+        rank: 'Majin',
+        renderName: 'majin'
+    },
+    {
+        rank: 'Super Saiyan God',
+        renderName: 'ssg'
+    },
+    {
+        rank: 'Super Saiyan Blue',
+        renderName: 'ssb'
+    },
+    {
+        rank: 'Living Legend',
+        renderName: 'living_legend'
+    },
+    {
+        rank: 'Super Saiyan Rosé',
+        renderName: 'ssr'
+    },
+    {
+        rank: 'Pride Trooper',
+        renderName: 'pride_trooper'
+    },
+    {
+        rank: 'Ultra Instinct -Sign-',
+        renderName: 'ui_sign'
+    },
+    {
+        rank: 'Super Saiyan Blue Evolved',
+        renderName: 'ssb_evolved'
+    },
+    {
+        rank: 'God Of Destruction',
+        renderName: 'g.o.d'
+    },
+    {
+        rank: 'Ultra Instinct',
+        renderName: 'ui'
+    },
+    {
+        rank: 'Angel',
+        renderName: 'angel'
+    },
+    {
+        rank: 'Grand Priest',
+        renderName: 'grand_priest'
+    },
+    {
+        rank: 'Zen-Oh',
+        renderName: 'zen_oh'
+    }
+]
 const position = {
     point: 0,
     mid: 1,
@@ -520,6 +619,12 @@ $('.assistsCheckbox > label').addEventListener('click' , () => {
     checkbox.checked && svg.classList.add('checked')
     !(checkbox.checked) && svg.classList.remove('checked')
 })
+$('.rankCheckbox > label').addEventListener('click' , () => {
+    const checkbox = $('.rankCheckbox > label input');
+    const svg = $('.rankCheckbox label svg');
+    checkbox.checked && svg.classList.add('checked')
+    !(checkbox.checked) && svg.classList.remove('checked')
+})
 
 
 const copy = url => {
@@ -577,8 +682,22 @@ const changeAssist = (character, pos, act) => {
     $$('.character')[position[pos]].classList.remove('a', 'b', 'c');
     $$('.character')[position[pos]].classList.add(assistType)
 }
+const rankImg = $('.rankImg > img');
 
+const changeRank = (Rank, act) => {
+    let rankIndex = ranks.findIndex(rankName => rankName.rank === Rank)
+    const length = ranks.length;
+    let newRank = eval(`${rankIndex} ${action[act]} 1`);
+    if (newRank >= length)  newRank = 0
+    else if (newRank < 0)  newRank = length - 1
+    rankImg.src = generateSrc(ranks[newRank], 'ranks', 'png')
+    $('.rankBig > img').src = generateSrc(ranks[newRank], 'ranks', 'png')
+    rankImg.dataset.rank = ranks[newRank].rank;
+}
 //
+$$('.arrow').forEach(arrow => {
+    arrow.addEventListener('click', e => changeRank(rankImg.dataset.rank, e.currentTarget.dataset.direction)) 
+})
 $$('.Zarrow').forEach(arrow => {
     arrow.addEventListener('click', e => {
         const {
@@ -643,6 +762,11 @@ $('.teamImg').addEventListener('click', () => {
     } else {
         $('.characterContainer').classList.remove('hideAssists');
     }
+    if($('.rankCheckbox input').checked) {
+        $('.rankBig').classList.add('hideRank');
+    } else {
+        $('.rankBig').classList.remove('hideRank');
+    }
 })
 
 document.addEventListener('keydown', e => {
@@ -650,6 +774,7 @@ document.addEventListener('keydown', e => {
         $('body').classList.remove('photoMode')
         $('.characterContainer').classList.remove('hideAssists');
         $('.gamer').classList.remove('hideGamerTag');
+        $('.rankBig').classList.remove('hideRank')
     }
 })
 // $('.teamTier').addEventListener('click', () => $('body').classList.remove('photoMode'))
@@ -858,9 +983,7 @@ function random(n, p=undefined) {
 
 function load() {
     let images = [];
-    characterZ.forEach(char => {
-        if(char.renderName !== 'goku_ssj' &&  char.renderName !== 'vegeta_ssj' && char.renderName !== 'gohan_teen') images.push(new Image().src = generateSrc(char, 'renderZ', 'png'))
-    })
+    characterZ.forEach(char => images.push(new Image().src = generateSrc(char, 'renderZ', 'png')))
 }
 
 

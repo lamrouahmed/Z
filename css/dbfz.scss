@@ -795,6 +795,31 @@ header {
             }
         }
 
+        .rank {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .rankImg {
+                img {
+                    width: 15rem;
+                    margin: 0 1rem;
+                }
+            }
+
+            .arrow {
+                cursor: pointer;
+                svg {
+
+                    height: 2rem;
+                    width: 2rem;
+                    path {
+                        fill: #FFF;
+                    }
+                }
+            }
+            
+        }
 
         .checkBoxes {
             display: flex;
@@ -808,6 +833,7 @@ header {
                 margin-left: 1rem;
                 color: #FFF;
                 font-size: 1.5rem;
+                white-space: nowrap;
             }
 
             input[type='checkbox'] {
@@ -871,7 +897,21 @@ header {
 
 }
 
+.rankBig {
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    // width: 21%;
+    // bottom: 2%;
+    // left: 3%;
+    width: 100%;
+    bottom: 2%;
+    display: none;
 
+    img {
+        width: 17rem;
+    }
+}   
 
 .gamer {
     display: none;
@@ -945,10 +985,15 @@ header {
         display: flex;
     }
 
-
+    .rankBig {
+        display: flex;
+    }
 }
 
 .hideGamerTag {
+    display: none !important;
+}
+.hideRank {
     display: none !important;
 }
 

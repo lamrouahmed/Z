@@ -922,6 +922,36 @@ header .socialMedia > div svg {
   color: #FFF;
 }
 
+.footer .part2 .rank {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .part2 .rank .rankImg img {
+  width: 15rem;
+  margin: 0 1rem;
+}
+
+.footer .part2 .rank .arrow {
+  cursor: pointer;
+}
+
+.footer .part2 .rank .arrow svg {
+  height: 2rem;
+  width: 2rem;
+}
+
+.footer .part2 .rank .arrow svg path {
+  fill: #FFF;
+}
+
 .footer .part2 .checkBoxes {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -947,6 +977,7 @@ header .socialMedia > div svg {
   margin-left: 1rem;
   color: #FFF;
   font-size: 1.5rem;
+  white-space: nowrap;
 }
 
 .footer .part2 .checkBoxes input[type='checkbox'] {
@@ -998,6 +1029,23 @@ header .socialMedia > div svg {
 .footer .part2 .checkBoxes .checked path {
   fill: #181717;
   stroke: #181717;
+}
+
+.rankBig {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  width: 100%;
+  bottom: 2%;
+  display: none;
+}
+
+.rankBig img {
+  width: 17rem;
 }
 
 .gamer {
@@ -1070,7 +1118,17 @@ header .socialMedia > div svg {
   display: flex;
 }
 
+.photoMode .rankBig {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .hideGamerTag {
+  display: none !important;
+}
+
+.hideRank {
   display: none !important;
 }
 
