@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @font-face {
   font-family: "DB";
-  src: url("../font/Saiyan-Sans.ttf");
+  src: url("../font/edosz.ttf");
   font-weight: bold;
   font-style: normal;
 }
@@ -350,7 +350,7 @@ header .socialMedia > div svg {
   color: #FFF;
   font-weight: 400;
   text-shadow: 2px 2px 1px #000;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   letter-spacing: 1px;
 }
 
@@ -784,11 +784,10 @@ header .socialMedia > div svg {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   height: 5rem;
-  width: 83%;
+  width: 100%;
 }
 
 .footer .part2 .gamerInfo {
@@ -976,7 +975,7 @@ header .socialMedia > div svg {
           align-items: center;
   margin-left: 1rem;
   color: #FFF;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   white-space: nowrap;
 }
 

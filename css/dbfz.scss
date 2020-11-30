@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: "DB";
-    src: url('../font/Saiyan-Sans.ttf');
+    src: url('../font/edosz.ttf');
     font-weight: bold;
     font-style: normal;
 }
@@ -363,7 +363,7 @@ header {
                 color: #FFF;
                 font-weight: 400;
                 text-shadow: 2px 2px 1px #000;
-                font-size: 1.6rem;
+                font-size: 1.3rem;
                 letter-spacing: 1px;
             }
         }
@@ -700,9 +700,9 @@ header {
     .part2 {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
         height: 5rem;
-        width: 83%;
+        width: 100%;
 
         .gamerInfo {
             display: flex;
@@ -832,7 +832,7 @@ header {
                 align-items: center;
                 margin-left: 1rem;
                 color: #FFF;
-                font-size: 1.5rem;
+                font-size: 1.3rem;
                 white-space: nowrap;
             }
 
