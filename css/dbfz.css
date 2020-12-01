@@ -29,6 +29,10 @@ body {
   overflow-x: hidden;
 }
 
+.apology {
+  display: none;
+}
+
 .loaded {
   background-color: #f6f6f6;
 }
@@ -1174,6 +1178,41 @@ header .socialMedia > div svg {
 @media (min-width: 0px) and (max-width: 736px) {
   .teamContainer {
     height: unset !important;
+  }
+  .loaded {
+    position: relative;
+  }
+  .loaded .logo {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    background-color: #1f1f20;
+  }
+  .loaded .logo img {
+    width: 9.25rem;
+    height: 9.1875rem;
+  }
+  .loaded .logo .apology {
+    position: absolute;
+    bottom: 10%;
+    color: #FFF;
+    font-size: 1.3rem;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .loaded .logo .apology img {
+    width: 3rem;
+    height: 3rem;
+  }
+  .loaded .teamContainer, .loaded header, .loaded .footer {
+    display: none !important;
   }
   #characterContainer {
     -webkit-box-orient: vertical;
