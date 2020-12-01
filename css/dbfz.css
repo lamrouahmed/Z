@@ -1208,8 +1208,9 @@ header .socialMedia > div svg {
             align-items: center;
   }
   .loaded .logo .apology img {
-    width: 3rem;
-    height: 3rem;
+    width: 4rem;
+    height: 5rem;
+    margin-left: 1rem;
   }
   .loaded .teamContainer, .loaded header, .loaded .footer {
     display: none !important;
