@@ -1191,6 +1191,8 @@ header .socialMedia > div svg {
   .loaded .logo img {
     width: 9.25rem;
     height: 9.1875rem;
+    -webkit-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
   }
   .loaded .logo .apology {
     position: absolute;
