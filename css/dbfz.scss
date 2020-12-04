@@ -158,7 +158,8 @@ header {
 
 
 .teamContainer {
-    height: 88%;
+    // height: 88%;
+    height: 67%;
     // display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -962,11 +963,12 @@ header {
         height: 0 !important;
     }
 
-    .footer {
-        right: 100%;
-        transform: scale(0);
-        display: none !important;
-    }
+    // .footer {
+    //     right: 100%;
+    //     transform: scale(0);
+    //     display: none !important;
+        
+    // }
 
     .teamContainer {
         height: 100% !important;

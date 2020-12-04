@@ -151,7 +151,7 @@ header .socialMedia > div svg {
 }
 
 .teamContainer {
-  height: 88%;
+  height: 67%;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -1091,13 +1091,6 @@ header .socialMedia > div svg {
 
 .photoMode header {
   height: 0 !important;
-}
-
-.photoMode .footer {
-  right: 100%;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  display: none !important;
 }
 
 .photoMode .teamContainer {
