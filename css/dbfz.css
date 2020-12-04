@@ -26,7 +26,7 @@ html {
 body {
   height: 100%;
   background-color: #1f1f20;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .apology {
@@ -151,7 +151,7 @@ header .socialMedia > div svg {
 }
 
 .teamContainer {
-  height: 67%;
+  height: 88%;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -1091,6 +1091,13 @@ header .socialMedia > div svg {
 
 .photoMode header {
   height: 0 !important;
+}
+
+.photoMode .footer {
+  right: 100%;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  display: none !important;
 }
 
 .photoMode .teamContainer {
