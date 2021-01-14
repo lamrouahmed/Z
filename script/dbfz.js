@@ -460,7 +460,7 @@ const characterZ = [{
             b: 'revenge driver',
             c: 'revenge final flash'
         },
-        color: '#c68e22',
+        color: '#184959',
         tier: 'S'
     }
 ]
