@@ -451,8 +451,21 @@ const characterZ = [{
         },
         color: '#ad884d',
         tier: 'S'
+    },
+    {
+        name: 'Super Baby 2',
+        renderName: 'super_baby_2',
+        zAssist: {
+            a: 'revenge blast',
+            b: 'revenge driver',
+            c: 'revenge final flash'
+        },
+        color: '#c68e22',
+        tier: 'S'
     }
 ]
+
+
 
 const ranks = [
     {
