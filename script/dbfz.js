@@ -42,7 +42,7 @@ const characterZ = [{
             b: 'Masendan',
             c: 'Flying Kick'
         },
-        color: '#ecbb27',
+        color: '#f4a642', //#eccbb27
         tier: 'Z'
     },
     {
