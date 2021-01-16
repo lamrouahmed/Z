@@ -97,7 +97,7 @@ const characterZ = [{
             b: 'Destructo-Disc',
             c: 'Support Attack'
         },
-        color: '#3e5eca',
+        color: '#192652',
         tier: 'S'
     },
     {
@@ -108,7 +108,7 @@ const characterZ = [{
             b: 'Miracle Super Punch',
             c: 'Vengeful Shout'
         },
-        color: '#eccb80',
+        color: '#373839', //#eccb80
         tier: 'Z'
     },
     {
@@ -383,7 +383,7 @@ const characterZ = [{
             b: 'Dragon Flash Fist',
             c: 'Power Pole'
         },
-        color: '#6365aa',
+        color: '#272844',
         tier: 'S'
     },
     {
@@ -405,7 +405,7 @@ const characterZ = [{
             b: 'Rising Vortex',
             c: 'Galick Gun'
         },
-        color: '#3c7cb5',
+        color: '#306492',
         tier: 'B'
     },
     {
