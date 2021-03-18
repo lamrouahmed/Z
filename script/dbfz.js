@@ -456,12 +456,23 @@ const characterZ = [{
         name: 'Super Baby 2',
         renderName: 'super_baby_2',
         zAssist: {
-            a: 'revenge blast',
-            b: 'revenge driver',
-            c: 'revenge final flash'
+            a: 'Revenge Blast',
+            b: 'Revenge Driver',
+            c: 'Revenge Final Flash'
         },
         color: '#184959',
         tier: 'S'
+    },
+    {
+        name: 'Gogeta(SS4)',
+        renderName: 'gogeta_ssj4',
+        zAssist: {
+            a: 'Finish Sign',
+            b: 'Lightning Hammer',
+            c: 'Plus Energy of Justice'
+        },
+        color: '#8c2531',
+        tier: 'Z'
     }
 ]
 
