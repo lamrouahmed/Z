@@ -1227,6 +1227,14 @@ header .socialMedia > div svg {
   .Zarrows {
     display: none !important;
   }
+  .footer {
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+  }
   .footer > div {
     height: unset !important;
   }

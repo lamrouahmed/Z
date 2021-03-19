@@ -1148,6 +1148,8 @@ header {
         display: none !important;
     }
     .footer {
+        justify-content: center !important;
+        align-items: center !important;
         &>div {
             height: unset !important;
         }
