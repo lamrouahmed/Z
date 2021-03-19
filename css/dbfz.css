@@ -1192,6 +1192,9 @@ header .socialMedia > div svg {
     -webkit-transform: skewX(0deg);
             transform: skewX(0deg);
   }
+  #characterContainer .charContainer:last-child {
+    margin-bottom: 5rem;
+  }
   #characterContainer .charContainer:last-child .charImg {
     overflow: hidden;
   }
@@ -1234,6 +1237,8 @@ header .socialMedia > div svg {
     -webkit-box-align: center !important;
         -ms-flex-align: center !important;
             align-items: center !important;
+    position: fixed;
+    bottom: 0;
   }
   .footer > div {
     height: unset !important;

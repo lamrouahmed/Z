@@ -1101,6 +1101,7 @@ header {
                 .charImg {
                     overflow: hidden;
                 }
+                margin-bottom: 5rem;
             }
 
             
@@ -1150,6 +1151,8 @@ header {
     .footer {
         justify-content: center !important;
         align-items: center !important;
+        position: fixed;
+        bottom: 0;
         &>div {
             height: unset !important;
         }
