@@ -1252,6 +1252,10 @@ header .socialMedia > div svg {
   .footer .part1 .orientation {
     display: none;
   }
+  .footer .part1 .generate,
+  .footer .part1 .random {
+    -webkit-tap-highlight-color: transparent;
+  }
   .footer .part2 {
     display: none;
   }
