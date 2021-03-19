@@ -1048,44 +1048,47 @@ header {
 
 @include mobile {
     
+    header {
+        height: 4.5rem !important;
+    }
     .teamContainer {
         height: unset !important;
     }
     
-    .loaded {
-        position: relative;
-        .logo {
-            display: flex !important;
-            background-color: #1f1f20;
+    // .loaded {
+    //     position: relative;
+    //     .logo {
+    //         display: flex !important;
+    //         background-color: #1f1f20;
 
-            img {
-                width: 9.25rem;
-                height: 9.1875rem;
-                transition: all 200ms ease-in-out;
-            }
-            .apology {
-                position: absolute;
-                bottom: 10%;
-                color: #FFF;
-                font-size: 1.15rem;
-                display: flex !important;
-                justify-content: center;
-                align-items: center;
+    //         img {
+    //             width: 9.25rem;
+    //             height: 9.1875rem;
+    //             transition: all 200ms ease-in-out;
+    //         }
+    //         .apology {
+    //             position: absolute;
+    //             bottom: 10%;
+    //             color: #FFF;
+    //             font-size: 1.15rem;
+    //             display: flex !important;
+    //             justify-content: center;
+    //             align-items: center;
                 
-                img {
-                    width: 4rem;
-                    height: 5rem;
-                    margin-left: 1rem;
-                }
-            }
+    //             img {
+    //                 width: 4rem;
+    //                 height: 5rem;
+    //                 margin-left: 1rem;
+    //             }
+    //         }
 
 
 
-        }
-        .teamContainer, header, .footer {
-            display: none !important;
-        }
-    }
+    //     }
+    //     .teamContainer, header, .footer {
+    //         display: none !important;
+    //     }
+    // }
 
 
     #characterContainer {
@@ -1099,10 +1102,24 @@ header {
                     overflow: hidden;
                 }
             }
+
+            
+            &:nth-child(2)::before {
+                left: 0% !important;
+            }
+
+            &:nth-child(3)::before {
+                left: 0 !important;
+            }
         }
 
         .character {
             transform: skewX(0deg);
+
+            &::after {
+                transform: scale(0.1) !important; 
+                top: 35% !important;
+            }
         }
 
         .charImg {
@@ -1127,10 +1144,25 @@ header {
     .teamTier {
         right: -20% !important;
     }
-
+    .Zarrows {
+        display: none !important;
+    }
     .footer {
         &>div {
             height: unset !important;
+        }
+
+        .part1 {
+            height: 5rem !important;
+            .teamInfo,
+            .colors,
+            .teamStrength,
+            .orientation {
+                display: none;
+            }
+        }
+        .part2 {
+            display: none;
         }
     }
 }
