@@ -142,7 +142,7 @@ const characterZ = [{
             c: 'Cartwheel'
         },
         color: '#ffc1c0',
-        tier: 'S'
+        tier: 'A'
     },
     {
         name: 'Nappa',
@@ -197,7 +197,7 @@ const characterZ = [{
             c: 'Masenko'
         },
         color: '#94492e',
-        tier: 'S'
+        tier: 'A'
     },
     {
         name: 'Hit',
@@ -208,7 +208,7 @@ const characterZ = [{
             c: 'Time Release'
         },
         color: '#7b647d',
-        tier: 'A'
+        tier: 'S'
     },
     {
         name: 'Goku (SSGSS)',
@@ -241,7 +241,7 @@ const characterZ = [{
             c: 'God of Destruction\'s Wrath'
         },
         color: '#94799c',
-        tier: 'A'
+        tier: 'S'
     },
     {
         name: 'Goku Black',
@@ -252,7 +252,7 @@ const characterZ = [{
             c: 'Fierce God Kick'
         },
         color: '#7d6f6f',
-        tier: 'C'
+        tier: 'B'
     },
     {
         name: 'Android 21',
@@ -263,7 +263,7 @@ const characterZ = [{
             c: 'Snack Time'
         },
         color: '#c5afbd',
-        tier: 'S'
+        tier: 'Z'
     },
     {
         name: 'Goku',
@@ -318,7 +318,7 @@ const characterZ = [{
             c: 'Rebellion Combination'
         },
         color: '#375347',
-        tier: 'Z'
+        tier: 'S'
     },
     {
         name: 'Vegito(SSGSS)',
@@ -362,7 +362,7 @@ const characterZ = [{
             c: 'Flash Fist'
         },
         color: '#d2403f',
-        tier: 'A'
+        tier: 'S'
     },
     {
         name: 'Videl',
@@ -384,7 +384,7 @@ const characterZ = [{
             c: 'Power Pole'
         },
         color: '#272844',
-        tier: 'S'
+        tier: 'A'
     },
     {
         name: 'Janemba',
@@ -406,7 +406,7 @@ const characterZ = [{
             c: 'Galick Gun'
         },
         color: '#306492',
-        tier: 'B'
+        tier: 'A'
     },
     {
         name: 'Broly(DBS)',
@@ -417,7 +417,7 @@ const characterZ = [{
             c: 'Blaster Cannon'
         },
         color: '#415134',
-        tier: 'S'
+        tier: 'A'
     },
     {
         name: 'Kefla',
@@ -428,7 +428,7 @@ const characterZ = [{
             c: 'Gigantic Breaker'
         },
         color:'#c2446c',
-        tier: 'S'
+        tier: 'A'
     },
     {
         name: 'Goku(Ultra Instinct)',
@@ -450,7 +450,7 @@ const characterZ = [{
             c: 'Turtle Hermit Flurry'
         },
         color: '#ad884d',
-        tier: 'S'
+        tier: 'A'
     },
     {
         name: 'Super Baby 2',
