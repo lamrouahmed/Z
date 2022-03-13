@@ -475,6 +475,17 @@ const characterZ = [
     color: "#8c2531",
     tier: "Z",
   },
+  {
+    name: "Android 21(Lab Coat)",
+    renderName: "android_21_labcoat",
+    zAssist: {
+      a: "Savory Slicer",
+      b: "Barrier Sphere",
+      c: "Photon Swipe",
+    },
+    color: "#ce4343",
+    tier: "Z",
+  },
 ];
 
 const ranks = [
